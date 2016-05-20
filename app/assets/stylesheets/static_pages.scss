@@ -1,3 +1,89 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// General
+
+body {
+	margin-top: 70px;
+}
+
+// General Typography
+
+h1 {
+	font-family: Futura, sans-serif;
+	color: #dbae58;
+	text-align: center;
+}
+
+h2 {
+	font-family: Futura, sans-serif;
+	color: #4e595c;
+	text-align: center;
+}
+
+p {
+	font-family: Arial, sans-serif;
+	color: #4e595c;
+	text-align: left;
+}
+
+// Nav Bar
+
+.navbar-brand {
+	text-decoration: none;
+}
+
+.navbar {
+	background-color: #588998;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	letter-spacing: 0.1em;
+	padding: 0 5% 0 2%;
+}
+
+.navbar a {
+	color: #fff !important;
+}
+
+.navbar a:hover {
+	color: #dbae58 !important;
+}
+
+// Images
+
+.title-image {
+	margin: 0 auto 0 auto;
+}
+
+// Main Window
+
+.main-container p {
+	width: 85%;
+	margin: 20px auto 0 auto;
+}
+
+// Contact Page
+
+.contact-info > ul {
+	width: 85%;
+	margin: 20px auto 0 auto;
+}
+
+// Footer
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #b5b5b5;
+}
+
+#copyright {
+	position: relative;
+	top: 20px;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	margin-left: 5%;
+}
