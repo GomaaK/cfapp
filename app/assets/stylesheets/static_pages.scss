@@ -25,6 +25,7 @@ h2 {
 p {
 	font-family: Arial, sans-serif;
 	color: #4e595c;
+	font-size: 1.25em;
 	text-align: left;
 }
 
@@ -56,18 +57,40 @@ p {
 	margin: 0 auto 0 auto;
 }
 
+#munich-skyline {
+
+	margin: 20px auto 20px auto;
+}
+
 // Main Window
 
 .main-container p {
 	width: 85%;
+	overflow: auto;
 	margin: 20px auto 0 auto;
 }
 
 // Contact Page
 
-.contact-info > ul {
-	width: 85%;
+.contact-info {
+	width: 400px;
 	margin: 20px auto 0 auto;
+	line-height: 2.5;
+	background-color: #e0e0e0;
+}
+
+.contact-info > ul {
+	list-style: none;
+}
+
+.contact-info li {
+	font-family: Arial, sans-serif;
+	font-size: 1.5em;
+	color: #dbae58;
+}
+
+.contact-info li:hover {
+	color: #4e595c;
 }
 
 // Footer
@@ -84,6 +107,7 @@ footer {
 	position: relative;
 	top: 20px;
 	font-family: Arial, sans-serif;
+	font-size: 1em;
 	color: #fff;
 	margin-left: 5%;
 }

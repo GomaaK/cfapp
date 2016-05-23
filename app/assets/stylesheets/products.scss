@@ -1,0 +1,40 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#products-subtitle {
+	text-align: center;
+	font-style: italic;
+}
+
+table {
+	width: 80%;
+	background-color: #d3d3d3;
+  margin: 20px auto 0 auto;
+}
+
+table th, td {
+	padding-left: 10px;
+}
+
+th, td {
+	line-height: 30px;
+}
+
+#new-product-link {
+	margin-left: 10%;
+}
+
+.show-container {
+	width: 80%;
+	margin: 20px auto 0 auto;
+}
+
+.new-product-container {
+	width: 80%;
+	margin: 20px auto 0 auto;
+}
+
+.bottom-navigation-links {
+	margin-top: 10%;
+}
