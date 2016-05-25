@@ -4,11 +4,30 @@
 
 // General
 
-body {
-	margin-top: 70px;
+html {
+  position: relative;  // For sticky footer
+  min-height: 100%;    // For sticky footer
 }
 
-// General Typography
+body {
+	margin-top: 70px;
+  margin-bottom: 60px; // For sticky footer
+}
+
+#static-header {
+	margin-top: 6%;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #d3d3d3;
+	margin: 1em 0;
+	padding: 0; 
+}
+
+// General typography
 
 h1 {
 	font-family: Futura, sans-serif;
@@ -29,7 +48,7 @@ p {
 	text-align: left;
 }
 
-// Nav Bar
+// Nav bar
 
 .navbar-brand {
 	text-decoration: none;
@@ -51,35 +70,65 @@ p {
 	color: #dbae58 !important;
 }
 
-// Images
+// Footer
+
+.footer {
+  position: absolute;  // For sticky footer
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #b5b5b5;
+}
+
+#copyright {
+	position: relative;
+	top: 20px;
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	color: #fff;
+}
+
+// Index page
 
 .title-image {
-	margin: 0 auto 0 auto;
+	margin: 5% auto 0 auto;
+}
+
+.static-index-container {
+	width: 80%;
+	background-color: #dde7ea;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	padding: 2%;
+	margin: 3% auto 0 auto;
+}
+
+// About page
+
+.static-about-container {
+	width: 80%;
+	padding: 2%;
+	margin: 0 auto;
 }
 
 #munich-skyline {
-
-	margin: 20px auto 20px auto;
+	margin: 3% auto;
 }
 
-// Main Window
+// Contact page
 
-.main-container p {
-	width: 85%;
-	overflow: auto;
-	margin: 20px auto 0 auto;
+.static-contact-container {
+	width: 70%;
+	margin: 5% auto 2% auto;
 }
-
-// Contact Page
 
 .contact-info {
-	width: 400px;
-	margin: 20px auto 0 auto;
+	min-width: 380px;
 	line-height: 2.5;
-	background-color: #e0e0e0;
+	background-color: #f5f5f5;
 }
 
-.contact-info > ul {
+.contact-info ul {
 	list-style: none;
 }
 
@@ -93,21 +142,62 @@ p {
 	color: #4e595c;
 }
 
-// Footer
+// Contact form
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #b5b5b5;
+form {
+	width: 85%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 2%;
+	margin: 3% auto;
 }
 
-#copyright {
-	position: relative;
-	top: 20px;
-	font-family: Arial, sans-serif;
-	font-size: 1em;
+input, textarea {
+	font-family: Verdana, serif;
+	font-size: 1.5em;
+	color: #34495e !important; /* !important necessary */
+}
+
+.form-group {
+	width: 85%;
+	margin: 0 auto 2% auto;
+}
+
+.form-control {
+	background-color: #f5f5f5;
+}
+
+.form-control:focus {
+	outline: none;
+	border:1px solid #707f8e;
+	box-shadow: 2px 2px 10px #d3d3d3;
+}
+
+#form-button {
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.btn.outline {
+	background: none;
+	padding: 12px 22px;
+}
+
+.btn-primary.outline {
+	border: 2px solid #707f8e;
+	color: #707f8e;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .open > .dropdown-toggle.btn-primary {
+	color: #588998;
+	border-color: #588998;
+}
+
+.btn-primary.outline:active {
+	background-color: #588998;
+	border-color: #588998;
+	outline: none;
 	color: #fff;
-	margin-left: 5%;
+	box-shadow: none;
 }

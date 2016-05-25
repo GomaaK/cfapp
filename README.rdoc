@@ -4,7 +4,9 @@ This is my first Career Foundry Rails APP (cfapp).
 It will become an e-commerce site, over the course of the next units.
 
 Creator: Christian McTighe
+
 Email: cwmct79@gmail.com
+
 GitHub: https://github.com/cwmct79/cfapp.git
 
 This README would normally document whatever steps are necessary to get the
