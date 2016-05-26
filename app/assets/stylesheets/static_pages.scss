@@ -100,7 +100,7 @@ p {
 	border: 1px solid #d3d3d3;
 	border-radius: 5px;
 	padding: 2%;
-	margin: 3% auto 0 auto;
+	margin: 3% auto 5% auto;
 }
 
 // About page
@@ -108,11 +108,12 @@ p {
 .static-about-container {
 	width: 80%;
 	padding: 2%;
-	margin: 0 auto;
+	margin: 2% auto 0 auto;
 }
 
-#munich-skyline {
-	margin: 3% auto;
+#munich-pic {
+	border-radius: 5px;
+	margin: 0 auto 4% auto;
 }
 
 // Contact page
