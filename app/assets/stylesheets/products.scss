@@ -21,7 +21,7 @@
 }
 
 .product-index-container {
-	margin-top: 2%;
+	margin: 2% auto 5% auto;
 	background-color: #dde7ea;
 }
 
@@ -34,6 +34,10 @@
 	border: 1px solid #d3d3d3;
 	border-radius: 5px;
 	padding: 2%;
+}
+
+.product-box {
+	margin: 3% 0;
 }
 
 .book h2 {
@@ -51,11 +55,11 @@
 
 .book-info {
 	width: 55%;
-	margin: 0 auto;
+	margin: -10px auto 0 auto;
 }
 
 #new-product-link {
-	margin-left: 10%;   // To delete later
+	margin-left: 15%;   // To delete later
 }
 
 // Show

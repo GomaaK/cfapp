@@ -1,0 +1,21 @@
+<h1 id="orders-header">Orders</h1>
+<p id="orders-subtitle">Here is a list of orders that we are processing or have already processed.</p>
+
+<div class="container orders-index-container">
+	<div class="row orders-row">
+
+		<% @orders.each do |order| %>
+
+		<div class="col-md-3">
+			<p>User ID: <%= order.user_id %></p>
+			<p>Product ID: <%= order.product_id %></p>
+			<p>Order Total: $<%= order.total %></p>
+
+			<div>
+				<%= link_to 'Show', order %>
+			</div>
+		</div>
+
+		<% end %>
+	</div>
+</div>

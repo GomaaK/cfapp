@@ -51,3 +51,6 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
+# Rubocop Ruby code analyzer
+gem 'rubocop', require: false
