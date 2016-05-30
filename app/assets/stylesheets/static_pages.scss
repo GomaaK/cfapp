@@ -95,12 +95,52 @@ p {
 }
 
 .static-index-container {
-	width: 80%;
+	width: 90%;
+	margin: 5% auto;
+}
+
+.static-index-info {
 	background-color: #dde7ea;
 	border: 1px solid #d3d3d3;
 	border-radius: 5px;
 	padding: 2%;
-	margin: 3% auto 5% auto;
+}
+
+// Featured Product
+
+#image-carousel {
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	padding: 5%;
+}
+
+.featured-products {
+	margin: auto auto 5% auto;
+	min-width: 250px;
+	max-width: 50vw;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	margin: auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-color: #fff;
+	background-image: none !important;
+	filter: none !important;
+}
+
+.carousel-caption {
+	display: none;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #e50000;
+}
+
+#image-carousel:hover {
+	.carousel-caption {
+		display: block;
+	}
 }
 
 // About page

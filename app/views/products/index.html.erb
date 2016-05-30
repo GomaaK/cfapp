@@ -5,29 +5,9 @@
 
 <div class="container product-index-container">
 	<div class="row product-row">
-
-	<% @products.each do |product| %>
-
-	  <div class="col-md-4 col-sm-6 col-xs-12 product-box">
-	  	<div class="book">
-		    <h2><%= product.name %></h2>
-		    <div class="thumbnail"><%= image_tag(product.image_url, class: "img-responsive") %></div>
-		    <div class="book-info">
-		    	<p><%= product.description %></p>
-		    	<p>$<%= product.price %></p>
-		    </div>
-	    </div>
-		  <div>
-				<%= link_to 'Show', product %>
-				<%= link_to 'Edit', edit_product_path(product) %>
-				<%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</div>
-		</div>
-	<% end %>
-
+		<%= render @products %>
 	</div>
 </div>
-
 
 <div id="new-product-link">
   <%= link_to 'Add New Product', new_product_path %>

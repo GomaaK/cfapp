@@ -1,15 +1,55 @@
 <h1 id="static-header">Welcome to Book Mania!</h1>
 
-<%= image_tag("book.png", class: "img-responsive title-image") %>
+<div class="container-fluid static-index-container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-1 static-index-info">
+			<%= image_tag("book.png", class: "img-responsive title-image") %>
+			<h2>Your source for <i>rare</i> and <i>hard-to-find books</i></h2>
+			<hr>
+			<p>Welcome to one of the best book websites on the Internet!</p>
+			<p>If you're looking for a particular book, you've come to the right place.</p>
+			<p>We have an enormous selection of books, which you can browse on our online catalogue.</p>
+			<p>Don't see what you're looking for? Don't worry, we're experts at locating books. If it exists somewhere in the world, we'll find it &ndash; <b>guaranteed</b>!</p>
+		</div>
 
-<div class="static-index-container">
-	<h2>Your source for <i>rare</i> and <i>hard-to-find books</i></h2>
-	<hr>
-	<p>Welcome to one of the best book websites on the Internet!</p>
-	<br>
-	<p>If you're looking for a particular book, you've come to the right place.</p>
-	<br>
-	<p>We have an enormous selection of books, which you can browse on our online catalogue.</p>
-	<br>
-	<p>Don't see what you're looking for? Don't worry, we're experts at locating books. If it exists somewhere in the world, we'll find it &ndash; <b>guaranteed</b>!</p>
+		<div class="col-md-3 featured-products">
+			<h2>Featured Products</h2>
+
+		  <!-- Start of Image Carousel -->
+		  <div id="image-carousel" class="carousel slide" data-ride="carousel">
+		    <!-- Indicators -->
+		    <ol class="carousel-indicators">
+		      <% @products.each_with_index do |p, i| %>
+		        <li data-target="#image-carousel" data-slide-to="#{i}" class="#{'active' if i == 0}"></li>
+		      <% end %>
+		    </ol>
+
+		    <!-- Wrapper for slides -->
+		    <div class="carousel-inner" role="listbox">
+		      <% @products.each do |product| %>
+		        <div class="item<%= " active" if product == @products.first %>" id="product-image-box"> <!-- <div class="item active"> -->
+		          <%= image_tag(product.image_url, class: "img-responsive") %>
+		          <div class="carousel-caption">
+		            Buy now for only $<%= product.price %>! <!-- The product name in the caption is redundant <%= product.name %> -->
+		          </div>
+		        </div>
+		      <% end %>
+		    </div>
+
+		    <!-- Controls -->
+		    <a class="left carousel-control" href="#image-carousel" role="button" data-slide="prev">
+		      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+
+		    <a class="right carousel-control" href="#image-carousel" role="button" data-slide="next">
+		      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+
+		  <!-- End of Carousel -->
+		  </div>
+		</div>
+
+	</div>
 </div>
