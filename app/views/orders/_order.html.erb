@@ -1,0 +1,11 @@
+<% @orders.each do |order| %>
+
+<div class="col-md-3 col-xs-6 order-box">
+	<p>Order Number: <%= order.id %></p>
+	<p>Product ID: <%= order.product_id %></p>
+	<p>Order Total: $<%= order.total %></p>
+	<br>
+	<%= link_to 'Show', order %>
+</div>
+
+<% end %>

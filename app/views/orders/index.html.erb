@@ -3,19 +3,6 @@
 
 <div class="container orders-index-container">
 	<div class="row orders-row">
-
-		<% @orders.each do |order| %>
-
-		<div class="col-md-3">
-			<p>User ID: <%= order.user_id %></p>
-			<p>Product ID: <%= order.product_id %></p>
-			<p>Order Total: $<%= order.total %></p>
-
-			<div>
-				<%= link_to 'Show', order %>
-			</div>
-		</div>
-
-		<% end %>
+		<%= render @orders %>
 	</div>
 </div>

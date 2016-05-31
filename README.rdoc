@@ -1,7 +1,11 @@
 == README
 
-This is my first Career Foundry Rails APP (cfapp).
-It will become an e-commerce site, over the course of the next units.
+This is my first Career Foundry Rails App.
+It is a basic e-commerce site.
+
+App Name: cfapp
+
+Created: May 2016
 
 Creator: Christian McTighe
 
@@ -9,29 +13,21 @@ Email: cwmct79@gmail.com
 
 GitHub: https://github.com/cwmct79/cfapp.git
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Productions site: https://bookmaniaappdemo.herokuapp.com/
 
-Things you may want to cover:
+Notes:
 
-* Ruby version
+* Ruby version 2.3.0
 
-* System dependencies
+* Rails version 4.2.6
 
-* Configuration
+* Databases:
+	- development: sqlite3
+	- production: postgresql (Heroku)
 
-* Database creation
+* Orders controller and Order model not fully completed
 
-* Database initialization
+* No test suite installed
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* To my CF mentors:
+	Please feel free to leave any comments and give me feedback. Thanks.
