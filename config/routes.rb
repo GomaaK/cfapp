@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :products
-  resources :orders
+  resources :orders, only: [:index, :show]
 
   # You can have the root of your site routed with "root"
   root 'static_pages#index'

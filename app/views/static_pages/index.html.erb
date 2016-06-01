@@ -19,18 +19,18 @@
 		  <div id="image-carousel" class="carousel slide" data-ride="carousel">
 		    <!-- Indicators -->
 		    <ol class="carousel-indicators">
-		      <% @products.each_with_index do |p, i| %>
+		    	<% @products.each_with_index do |p, i| %>
 		        <li data-target="#image-carousel" data-slide-to="#{i}" class="#{'active' if i == 0}"></li>
 		      <% end %>
 		    </ol>
 
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner" role="listbox">
-		      <% @products.each do |product| %>
+		    	<% @products.each do |product| %>
 		        <div class="item<%= " active" if product == @products.first %>" id="product-image-box"> <!-- <div class="item active"> -->
-		          <%= image_tag(product.image_url, class: "img-responsive") %>
+		          <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
 		          <div class="carousel-caption">
-		            Buy now for only $<%= product.price %>! <!-- The product name in the caption is redundant <%= product.name %> -->
+		            Buy now for only $<%= product.price %>!
 		          </div>
 		        </div>
 		      <% end %>
@@ -46,7 +46,6 @@
 		      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		      <span class="sr-only">Next</span>
 		    </a>
-
 		  <!-- End of Carousel -->
 		  </div>
 		</div>

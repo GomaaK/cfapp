@@ -1,29 +1,40 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @product.name %></h1>
 
-<div class="show-container">
-	<p>
-	  <strong>Book:</strong>
-	  <%= @product.name %>
-	</p>
+<div class="container show-container">
+	<div class="row show-product-row">
+		<div class="col-md-2 col-md-offset-2">
+			<%= image_tag(@product.image_url, class: "img-responsive") %>
+		</div>
 
-	<p>
-	  <strong>Description:</strong>
-	  <%= @product.description %>
-	</p>
+		<div class="col-md-7 col-md-offset-1">
+		<p>
+		  <strong>Title:</strong>
+		  <%= @product.name %>
+		</p>
 
-	<p>
-	  <strong>Thumbnail:</strong>
-	  <%= @product.image_url %>
-	</p>
+		<p>
+		  <strong>Description:</strong>
+		  <%= @product.description %>
+		</p>
 
-	<p>
-	  <strong>Price:</strong>
-	  <%= @product.price %>
-	</p>
+		<p>
+		  <strong>Price:</strong>
+		  $<%= @product.price %>
+		</p>
 
-	<div class="bottom-navigation-links">
-		<%= link_to 'Edit', edit_product_path(@product) %> |
-		<%= link_to 'Back', products_path %>
+		<%= link_to 'Edit', edit_product_path(@product) %>
+		<%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+		</div>
+
 	</div>
+
+	<%= link_to 'Back to Products', products_path, class: "btn btn-show-back" %>
+	
+	<div class="show-browse-links">
+		<p><%= link_to '< Previous Book', @previous, class: "btn btn-show-browse" %></p>
+		<p><%= link_to 'Next Book >', @next, class: "btn btn-show-browse" %></p>
+	</div>
+
 </div>

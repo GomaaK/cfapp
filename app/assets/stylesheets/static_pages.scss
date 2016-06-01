@@ -106,7 +106,7 @@ p {
 	padding: 2%;
 }
 
-// Featured Product
+// Featured Product Carousel
 
 #image-carousel {
 	border: 1px solid #d3d3d3;
@@ -115,7 +115,6 @@ p {
 }
 
 .featured-products {
-	margin: auto auto 5% auto;
 	min-width: 250px;
 	max-width: 50vw;
 }
@@ -131,10 +130,10 @@ p {
 }
 
 .carousel-caption {
-	display: none;
 	font-size: 1.75em;
 	font-weight: bold;
 	color: #e50000;
+	display: none;
 }
 
 #image-carousel:hover {
