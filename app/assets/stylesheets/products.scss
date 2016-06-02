@@ -62,6 +62,7 @@
 
 .show-container {
 	width: 80%;
+	padding: 0;
 	margin: 3% auto 0 auto;
 }
 
@@ -71,9 +72,17 @@
 	padding: 2% 0;
 }
 
+#show-product-image {
+	margin: 2% auto;
+}
+
+.show-product-info {
+	margin: 2% 0;
+}
+
 .btn-show-back {
 	background-color: #d3d3d3;
-	margin: 2% 0;
+	margin: 2% auto;
 }
 
 .btn-show-back:hover {

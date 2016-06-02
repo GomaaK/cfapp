@@ -18,40 +18,40 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container" id="contact-form">
 	<!-- Contact form section -->
-	<form id="contact-form">
+	<%= form_for(@message) do |f| %> <!-- This will get updated soon -->
 	  <div class="form-group">
 	    <div class="row">
-	      <div class="col-xs-6">
-	        <label for="form-name">Name*</label>
-	        <input type="text" class="form-control" placeholder="Bugs Bunny" id="form-name" name="sender_name" required="required" minlength=2 maxlength=20></input>
+	      <div class="field col-xs-6">
+	        <%= f.label :name %>* :
+	        <%= f.text_field :name, placeholder: "Bugs Bunny", class: "form-control", id: "form-name", required: true, minlength: 2, maxlength: 20 %>
 	      </div>
-	      <div class="col-xs-6">
-	        <label for="form-company">Company</label>
-	        <input type="text" class="form-control" placeholder="Disney World" id="form-company" name="sender_company-organization" minlength=2 maxlength=20></input>
-	      </div>
-	    </div>
-	    <br>
-	    <div class="row">
-	      <div class="col-xs-6">
-	        <label for="form-email">Email*</label>
-	        <input type="email" class="form-control" placeholder="bugs@bunny.com" id="form-email" name="sender_email" required="required" minlength=6 maxlength=20></input>
-	      </div>
-	      <div class="col-xs-6">
-	        <label for="form-telephone">Telephone</label>
-	        <input type="tel" class="form-control" placeholder="123-456-7890" id="form-telephone" name="sender_telephone" min=9 max=15></input>
+	      <div class="field col-xs-6">
+	        <%= f.label :company %>:
+	        <%= f.text_field :company, placeholder: "Disney World", class: "form-control", id: "form-company", minlength: 2, maxlength: 20 %>
 	      </div>
 	    </div>
 	    <br>
 	    <div class="row">
-	      <div class="col-xs-12">
-	        <label for="message-box">Message*</label>
-	        <textarea style="resize:none" cols="40" rows="5" class="form-control" placeholder="Hello, what's your question?" id="message-box" name="sender_message" required="required" minlength=5 maxlength=400></textarea>
+	      <div class="field col-xs-6">
+	        <%= f.label :email %>* :
+	        <%= f.text_field :email, class: "form-control", placeholder: "bugs@bunny.com", id: "form-email", required: true, minlength: 6, maxlength: 20 %>
+	      </div>
+	      <div class="field col-xs-6">
+	        <%= f.label :telephone %>:
+	        <%= f.text_field :telephone, class: "form-control", placeholder: "123-456-7890", id: "form-telephone", min: 9, max: 15 %>
+	      </div>
+	    </div>
+	    <br>
+	    <div class="row">
+	      <div class="field col-xs-12">
+	        <%= f.label :message %>* :
+	        <%= f.text_area :message, class: "form-control", placeholder: "Hello, what's your question?", id: "message-box", cols: 40, rows: 5, disabled: true, required: true, minlength: 5, maxlength: 400 %>
 	        <br>
-	        <button type="submit" class="btn btn-primary outline" id="form-button">Send</button>
+	        <%= f.submit "Send", class: "btn btn-primary outline", id: "form-button" %>
 	      </div>
 	    </div>
 	  </div>
-	</form>
+	<% end %>
 </div>

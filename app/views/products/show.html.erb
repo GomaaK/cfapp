@@ -3,11 +3,11 @@
 
 <div class="container show-container">
 	<div class="row show-product-row">
-		<div class="col-md-2 col-md-offset-2">
-			<%= image_tag(@product.image_url, class: "img-responsive") %>
+		<div class="col-md-4">
+			<%= image_tag(@product.image_url, class: "img-responsive", id: "show-product-image") %>
 		</div>
 
-		<div class="col-md-7 col-md-offset-1">
+		<div class="col-md-6", id="show-product-info">
 		<p>
 		  <strong>Title:</strong>
 		  <%= @product.name %>

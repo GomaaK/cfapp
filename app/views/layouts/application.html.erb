@@ -33,8 +33,19 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Products", products_path, class: "scroll-nav" %></li>
           <li><%= link_to "Orders", orders_path, class: "scroll-nav" %></li>
-          <li><%= link_to "About", static_pages_about_path, class: "scroll-nav" %></li>
-          <li><%= link_to "Contact", static_pages_contact_path, class: "scroll-nav" %></li>
+          <li><%= link_to "About", '/about', class: "scroll-nav" %></li>
+          <li><%= link_to "Contact", '/contact', class: "scroll-nav" %></li>
+          <li>
+            <div class="input-group search">
+            <%= form_tag("/products", method: "get", class: "form-control") do %>
+              <%= label_tag nil %>
+              <%= text_field_tag :q, nil, class: "search-field", size: 18, placeholder: "Find a Book" %>
+              <%= button_tag(type: 'submit', class: "search-button") do %>
+                <i class="glyphicon glyphicon-search"></i> Search
+              <% end %>
+            <% end %>
+            </div>
+          </li>
         </ul>
       </div>
     </div>

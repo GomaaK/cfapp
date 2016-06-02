@@ -22,8 +22,8 @@ Notes:
 * Rails version 4.2.6
 
 * Databases:
-	* development: sqlite3
-	* production: postgresql (Heroku)
+	1. development: sqlite3
+	2. production: postgresql (Heroku)
 
 * Orders controller and Order model not fully completed
 
