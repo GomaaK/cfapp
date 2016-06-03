@@ -9,6 +9,7 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  # Contact form submission email sent to me
 	def thank_you
 		@name = params[:name]
 		@company = params[:company]
@@ -18,7 +19,8 @@ class StaticPagesController < ApplicationController
 		ActionMailer::Base.mail(
 			:from => @email,
  			:to => 'chrwimct@gmail.com',
- 			:subject => "A new contact form message from #{@name}",
-			:body => @message).deliver_now
+ 			:subject => "New Website Form Message",
+			:body => [@name, @company, @email, @telephone, @message]).deliver_now
+		UserMailer.contact_reply(@email, @name, @message).deliver_now
 	end
 end
