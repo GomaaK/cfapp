@@ -20,38 +20,49 @@
 
 <div class="container" id="contact-form">
 	<!-- Contact form section -->
-	<%= form_for(@message) do |f| %> <!-- This will get updated soon -->
-	  <div class="form-group">
-	    <div class="row">
-	      <div class="field col-xs-6">
-	        <%= f.label :name %>* :
-	        <%= f.text_field :name, placeholder: "Bugs Bunny", class: "form-control", id: "form-name", required: true, minlength: 2, maxlength: 20 %>
+	<%= flash[:notice] %>
+
+	<%= form_tag("/static_pages/thank_you") do %>
+	  <div class="row">
+      <div class="field col-xs-6">
+      	<div class="form-group">
+	        <%= label_tag :name, "Name*" %>
+	        <%= text_field_tag :name, nil, placeholder: "Bugs Bunny", class: "form-control", id: "form-name", required: true, minlength: 2, maxlength: 20 %>
 	      </div>
-	      <div class="field col-xs-6">
-	        <%= f.label :company %>:
-	        <%= f.text_field :company, placeholder: "Disney World", class: "form-control", id: "form-company", minlength: 2, maxlength: 20 %>
+	     </div>
+	     <div class="field col-xs-6">
+	     	<div class="form-group">
+	        <%= label_tag :company, "Company" %>
+	        <%= text_field_tag :company, nil, placeholder: "Disney World", class: "form-control", id: "form-company", minlength: 2, maxlength: 20 %>
 	      </div>
+	     </div>
 	    </div>
-	    <br>
-	    <div class="row">
-	      <div class="field col-xs-6">
-	        <%= f.label :email %>* :
-	        <%= f.text_field :email, class: "form-control", placeholder: "bugs@bunny.com", id: "form-email", required: true, minlength: 6, maxlength: 20 %>
+	   <br>
+	   <div class="row">
+	     <div class="field col-xs-6">
+	      <div class="form-group">
+	        <%= label_tag :email, "Email*" %>
+	        <%= text_field_tag :email, nil, class: "form-control", placeholder: "bugs@bunny.com", id: "form-email", required: true, minlength: 6, maxlength: 20 %>
 	      </div>
-	      <div class="field col-xs-6">
-	        <%= f.label :telephone %>:
-	        <%= f.text_field :telephone, class: "form-control", placeholder: "123-456-7890", id: "form-telephone", min: 9, max: 15 %>
+	     </div>
+	     <div class="field col-xs-6">
+	     	<div class="form-group">
+	        <%= label_tag :telephone, "Telephone" %>:
+	        <%= text_field_tag :telephone, nil, class: "form-control", placeholder: "123-456-7890", id: "form-telephone", min: 9, max: 15 %>
 	      </div>
+	     </div>
 	    </div>
-	    <br>
-	    <div class="row">
-	      <div class="field col-xs-12">
-	        <%= f.label :message %>* :
-	        <%= f.text_area :message, class: "form-control", placeholder: "Hello, what's your question?", id: "message-box", cols: 40, rows: 5, disabled: true, required: true, minlength: 5, maxlength: 400 %>
+	   <br>
+	   <div class="row">
+	     <div class="field col-xs-12">
+	     	<div class="form-group">
+	        <%= label_tag :message, "Message*" %>
+	        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your message here.", id: "message-box", cols: 40, rows: 5, required: true, minlength: 5, maxlength: 400 %>
 	        <br>
-	        <%= f.submit "Send", class: "btn btn-primary outline", id: "form-button" %>
+	        <%= submit_tag "Send", class: "btn btn-primary outline", id: "form-button" %>
 	      </div>
 	    </div>
 	  </div>
 	<% end %>
+
 </div>

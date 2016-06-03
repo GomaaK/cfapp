@@ -225,10 +225,10 @@ input, textarea {
 	font-family: Verdana, serif;
 	font-size: 1.5em;
 	color: #34495e !important; /* !important necessary */
+	resize: none;
 }
 
 .form-group {
-	width: 85%;
 	margin: 0 auto 2% auto;
 }
 
@@ -269,4 +269,10 @@ input, textarea {
 	outline: none;
 	color: #fff;
 	box-shadow: none;
+}
+
+.thank-you-page {
+	width: 50%;
+	padding: 2%;
+	margin: 5% auto;
 }
