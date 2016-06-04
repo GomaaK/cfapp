@@ -6,17 +6,24 @@
 
 // Index
 
-#products-header {
-	margin-top: 6%;
+.products-index-jumbotron {
+	position: relative;
+	background: url("books_products.jpg") center center;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 50vh;
 }
 
 #products-subtitle {
-	margin-top: 2%;
-	text-align: center;
+	margin-top: 3%;
 	font-style: italic;
 }
 
-.product-index-container {
+.product-container {
+	width: 90%;
+}
+
+.product-container {
 	margin: 2% auto 5% auto;
 	background-color: #dde7ea;
 }
@@ -63,7 +70,7 @@
 .show-container {
 	width: 80%;
 	padding: 0;
-	margin: 3% auto 0 auto;
+	margin: 3% auto 10% auto;
 }
 
 .show-product-row {

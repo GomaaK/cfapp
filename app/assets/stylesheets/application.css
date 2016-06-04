@@ -13,3 +13,143 @@
  *= require_tree .
  *= require_self
  */
+
+/* General */
+
+html {
+  position: relative;  /* For sticky footer */
+  min-height: 100%;    //* For sticky footer */
+}
+
+body {
+  margin-bottom: 60px; /* For sticky footer */
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #aaa;
+	margin: 1em 0;
+	padding: 0; 
+}
+
+#static-header {
+	position: relative;
+	display: block;
+	text-align: center;
+	margin-top: 20%;
+	font-size: 3em;
+}
+
+/* General typography */
+
+h1 {
+	font-family: Futura, sans-serif;
+	color: #dbae58;
+	text-align: center;
+}
+
+h2 {
+	font-family: Futura, sans-serif;
+	color: #4e595c;
+	text-align: center;
+}
+
+p {
+	font-family: Arial, sans-serif;
+	color: #4e595c;
+	font-size: 1.25em;
+	text-align: left;
+}
+
+/* Nav bar */
+
+.navbar {
+	/* background-color: #588998; */
+	text-transform: uppercase;
+	font-size: 1.25em;
+	letter-spacing: 0.1em;
+	text-align: center;
+	border: none;
+	height: auto !important;
+}
+
+.navbar li {
+	display: inline;
+}
+
+.navbar-inner {
+  text-align:center;
+}
+
+.navbar a {
+	color: #fff !important;
+}
+
+.navbar a:hover {
+	background: transparent !important;
+	color: #dbae58 !important;
+}
+
+/* Increase Nav bar height */
+
+.navbar-brand,
+.navbar-nav li a {
+	line-height: 75px;
+	height: 75px;
+	padding-top: 0;
+}
+
+/* Center nav links */
+
+.navbar-collapse.collapse {
+	text-align: center;
+  height: auto;
+  padding-bottom: 0;
+}
+
+.navbar-nav {
+  display: inline-block;
+  float: none;
+  margin: 0;
+}
+
+/* Transparency */
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;  /* For sticky footer */
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #b5b5b5;
+}
+
+#copyright {
+	position: relative;
+	top: 20px;
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	color: #fff;
+}

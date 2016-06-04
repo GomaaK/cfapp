@@ -1,7 +1,13 @@
 // Styles of Orders
 
-#orders-header {
-	margin-top: 6%;
+// Index
+
+.orders-index-jumbotron {
+	position: relative;
+	background: url("books_orders.jpg") center center;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 50vh;
 }
 
 #orders-subtitle {
@@ -12,8 +18,15 @@
 
 .orders-index-container {
 	background-color: #d3d3d3;
+	margin: 2% auto 10% auto;
 }
 
 .order-box {
 	padding: 2%;
+}
+
+// Show
+
+.show-container {
+	margin-bottom: 10%;
 }

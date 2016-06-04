@@ -1,0 +1,20 @@
+<div class="products-search-jumbotron">
+	<div class="container">
+	<h1 id="static-header">Search</h1>
+	</div>
+</div>
+
+<div class="book-search">
+	<h2>Already know what you want?</h2>
+		<div class="input-group">
+		  <%= form_tag("/products", method: "get", id: "form-box") do %>
+				<%= text_field_tag :q, nil, class: "search-field", placeholder: "Find a Book" %>
+				<br>
+				<%= button_tag(type: "submit", class: "btn btn-default", id: "search-button") do %>
+					<i class="glyphicon glyphicon-search"></i> Search
+				<% end %>
+		  <% end %>
+		</div>
+		<br>
+		<p>You can search by any available information relating to the book's title, author or description.</p>
+</div>

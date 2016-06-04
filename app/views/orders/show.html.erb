@@ -1,7 +1,11 @@
-<p id="notice"><%= notice %></p>
-<h1 id="orders-header">Current Order</h1>
+<div class="orders-index-jumbotron">
+	<div class="container">
+		<h1 id="static-header">Current Order</h1>
+	</div>
+</div>
 
-<div class="show-container">
+<div class="container show-container">
+	<p id="notice"><%= notice %></p>
 	<p>
 	  <strong>Order Number:</strong>
 	</p>
@@ -16,6 +20,6 @@
 	</p>
 
 	<div class="bottom-navigation-links">
-		<%= link_to 'Back', orders_path %>
+		<%= link_to 'Back to Orders', orders_path, class: "btn btn-show-back" %>
 	</div>
 </div>

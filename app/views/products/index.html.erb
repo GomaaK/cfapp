@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<h1 id="products-header">Our Books</h1>
-<p id="products-subtitle">Here is a selection of the books that we currently have in our inventory.</p>
-
-<div class="container product-index-container">
-	<div class="row product-row">
-		<%= render @products %>
+<div class="products-index-jumbotron">
+	<div class="container">
+		<h1 id="static-header">Our Books</h1>
 	</div>
 </div>
 
-<div id="new-product-link">
-  <%= link_to 'Add New Product', new_product_path %>
+<div class="container product-index-container">
+	<p id="products-subtitle">Here is a selection of the books that we currently have in our inventory.</p>
+	<p id="notice"><%= notice %></p>
+
+	<div class="container product-container">
+		<div class="row product-row">
+			<%= render @products %>
+		</div>
+	</div>
+
+	<div id="new-product-link">
+	  <%= link_to 'Add New Product', new_product_path %>
+	</div>
+
 </div>
