@@ -1,0 +1,20 @@
+<div class="products-search-jumbotron">
+	<div class="container">
+	<h1 id="static-header">Your Search</h1>
+	</div>
+</div>
+
+<div class="book-search">
+	<div class="container product-container">
+		<div class="row product-row">
+			<% if @products.present? %>
+				<p>Here are the results of your search for "<%= params[:q] %>":</p>
+				<%= render @products %>
+			<% else %>
+  			<p>Sorry, there are books containing "<%= params[:q] %>".</p>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<%= link_to 'Back to Search', '/search', class: "btn btn-search-back" %>

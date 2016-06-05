@@ -6,7 +6,8 @@
 
 #static-index-container {
 	width: 95%;
-	margin: 3% auto 10% auto;
+	margin: 3% auto 0 auto;
+	padding-bottom: 5%;
 }
 
 .static-index-jumbotron {
@@ -83,7 +84,7 @@
 	border: 1px solid #aaa;
 	border-radius: 5px;
 	padding: 3%;
-	margin: 2% auto 10% auto;
+	margin: 2% auto 0 auto;
 }
 
 .input-group {
@@ -101,6 +102,17 @@
 
 .book-search p {
 	text-align: center;
+}
+
+// Search Results page
+
+.btn-search-back {
+	background-color: #d3d3d3;
+	margin: 0 auto 5% 10%;
+}
+
+.btn-search-back:hover {
+	background-color: #a8a8a8;
 }
 
 // About page

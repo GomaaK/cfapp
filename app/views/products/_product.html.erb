@@ -3,8 +3,7 @@
     <h2><%= product.title %></h2>
     <div class="thumbnail"><%= link_to image_tag(product.image_url, class: "img-responsive"), product %></div>
     <div class="book-info">
-    	<p>By: <%= product.author %></p>
-    	<p><%= product.description %></p>
+    	<p>By <%= product.author %></p>
     	<p>$<%= product.price %></p>
     </div>
   </div>

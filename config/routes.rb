@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get '/search', to: 'static_pages#search'
 
+  get '/search_results', to: 'products#search_results'
+
   get '/about', to: 'static_pages#about'
 
   get '/contact', to: 'static_pages#contact'

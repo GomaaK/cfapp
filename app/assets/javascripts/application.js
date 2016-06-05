@@ -14,11 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery.bootstrap-autohidingnavbar
 
 // jQuery Functions
 $(document).ready(function(){
-	// Auto hide navbar
-	$(".navbar-fixed-top").autoHidingNavbar();
+	// code here
 
 });
