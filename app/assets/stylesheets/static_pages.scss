@@ -38,7 +38,31 @@
 	text-align: center;
 }
 
+.lower-icon-row {
+	width: 90%;
+	margin: 3% auto 0 auto;	
+}
+
+.icon-box {
+	background-color: #d3d3d3;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 2% 0;
+}
+
+.icon-box img {
+	margin: 0 auto;
+}
+
+.icon-box p {
+	text-align: center;
+}
+
 // Featured Product Carousel
+
+#featured-product-header {
+	margin-top: 0;
+}
 
 #image-carousel {
 	border: 1px solid #d3d3d3;
@@ -115,7 +139,6 @@
 .book-search p {
 	text-align: center;
 }
-
 
 // Search Results page
 
