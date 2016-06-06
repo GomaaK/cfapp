@@ -5,7 +5,7 @@
 	<p>Product ID: <%= order.product_id %></p>
 	<p>Order Total: $<%= order.total %></p>
 	<br>
-	<%= link_to 'Show', order %>
+	<%= link_to 'Show', order, class: "btn btn-edit-delete" %>
 </div>
 
 <% end %>

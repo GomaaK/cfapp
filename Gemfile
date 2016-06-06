@@ -54,3 +54,9 @@ end
 
 # Rubocop Ruby code analyzer
 gem 'rubocop', require: false
+
+# Turbolinks jQuery gem
+gem 'jquery-turbolinks', '~> 2.1'
+
+# Bootstrap for Rails gem
+gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'

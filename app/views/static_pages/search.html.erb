@@ -7,12 +7,13 @@
 <div class="book-search">
 	<h2>Already know what you want?</h2>
 		<div class="input-group">
-		  <%= form_tag("/search_results", method: "get") do %>
-  			<%= label_tag(:q, "Search for:") %>
-  			<%= text_field_tag(:q) %>
-  			<%= submit_tag("Search") %>
+		  <%= form_tag("/search_results", method: "get", class: "search-form") do %>
+  			<%= text_field_tag :q, nil, class: "search-field", placeholder: "Find a book" %>
+  			<%= submit_tag("Search", class: "search-button") %>
 			<% end %>
 		</div>
 		<br>
 		<p>You can search by any available information relating to the book's title, author or description.</p>
 </div>
+
+<div class="extra-space"></div>

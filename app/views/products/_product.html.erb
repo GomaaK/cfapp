@@ -1,9 +1,13 @@
 <div class="col-md-4 col-sm-6 col-xs-12 product-box">
 	<div class="book">
-    <h2><%= product.title %></h2>
+		<div class="product-title">
+    	<h2><%= product.title %></h2>
+    </div>
     <div class="thumbnail"><%= link_to image_tag(product.image_url, class: "img-responsive"), product %></div>
     <div class="book-info">
-    	<p>By <%= product.author %></p>
+    	<div class="product-author">
+    	   <p>By <%= product.author %></p>
+    	</div>
     	<p>$<%= product.price %></p>
     </div>
   </div>

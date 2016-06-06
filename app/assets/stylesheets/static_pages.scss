@@ -7,7 +7,6 @@
 #static-index-container {
 	width: 95%;
 	margin: 3% auto 0 auto;
-	padding-bottom: 5%;
 }
 
 .static-index-jumbotron {
@@ -20,6 +19,7 @@
 
 #left-sidebox {
 	text-align: center;
+	margin: 0 auto 3% auto;
 }
 
 #news-box {
@@ -37,6 +37,7 @@
 	border: 1px solid #aaa;
 	border-radius: 5px;
 	padding: 2%;
+	margin: 0 auto 3% auto;
 }
 
 #right-sidebox {
@@ -91,24 +92,42 @@
 	margin: auto;
 }
 
-#form-box {
-	border: none;
+.search-form {
+	width: 500px;
+	margin: 50px auto;
 }
 
-#search-button {
-	display: block;
-	margin: 0 auto;
+.search-field {
+	width: 366px;
+	padding: 8px 15px;
+	background: #f1f1f1;
+	border: 0px solid #dbdbdb;
+}
+
+.search-button {
+	position: relative;
+	padding: 6px 15px;
+	left: -3px;
+	border: 2px solid #207cca;
+	background-color: #207cca;
+	color: #fafafa;
+}
+
+.search-button:hover {
+	background-color: #1c6fb5;
+	color: #207cca;
 }
 
 .book-search p {
 	text-align: center;
 }
 
+
 // Search Results page
 
 .btn-search-back {
 	background-color: #d3d3d3;
-	margin: 0 auto 5% 10%;
+	margin: 5% auto 5% 10%;
 }
 
 .btn-search-back:hover {
@@ -232,4 +251,27 @@ input, textarea {
 	width: 50%;
 	padding: 2%;
 	margin: 5% auto;
+}
+
+// Misc
+
+.extra-space {
+	height: 100px;
+}
+
+// Media Queries
+
+@media (max-width: 660px) {
+	.search-form {
+		width: 300px;
+	}
+
+	.search-field {
+		width: 180px;
+		padding: 4px 7px;
+	}
+
+	.search-button {
+		padding: 3px 7px;
+	}
 }

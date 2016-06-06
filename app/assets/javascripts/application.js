@@ -11,12 +11,22 @@
 // about supported directives.
 //
 //= require jquery
+//= jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
-// jQuery Functions
-$(document).ready(function(){
-	// code here
-
+$(document).on('ready page:load', function () {
+	// Equalize product box title heights
+    var titleHeight = 0;           
+    $(".product-title").each(function(){
+      if ($(this).height() > titleHeight) { titleHeight = $(this).height(); }
+    });         
+    $(".product-title").height(titleHeight);
+    // Equalize product box author heights
+    var authorHeight = 0;           
+    $(".product-author").each(function(){
+      if ($(this).height() > authorHeight) { authorHeight = $(this).height(); }
+    });         
+    $(".product-author").height(authorHeight);
 });

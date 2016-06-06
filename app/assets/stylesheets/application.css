@@ -138,9 +138,20 @@ p {
   background-color: #fff;
 }
 
+/* Button navigation */
+
+.btn-navigate {
+	background-color: #d3d3d3;
+	margin: 5% 0 5% 5%;
+}
+
+.btn-navigate:hover {
+	background-color: #a8a8a8;
+}
+
 /* Footer */
 
-.footer {
+footer {
   position: absolute;  /* For sticky footer */
   bottom: 0;
   width: 100%;
@@ -148,10 +159,10 @@ p {
   background-color: #b5b5b5;
 }
 
-.footer > .container {
+footer > .container {
 	width: 90%;
 	margin: 0 auto;
-	padding: 30px 0;
+	padding-top: 30px;
 }
 
 .copyright {
