@@ -142,11 +142,15 @@ p {
 
 .btn-navigate {
 	background-color: #d3d3d3;
-	margin: 5% 0 5% 5%;
+	margin: 2% 0 2% 5%;
 }
 
 .btn-navigate:hover {
-	background-color: #a8a8a8;
+	background-color: #207cca;
+}
+
+.btn-navigate:active {
+	background-color: #207cca;
 }
 
 /* Footer */
@@ -183,4 +187,12 @@ footer > .container {
 
 .btn-social-icon {
 	margin-left: 10px;
+}
+
+/* Misc */
+
+.notice, .alert {
+	font-size: 2em;
+	color: #cc0000;
+	text-align: center;
 }

@@ -14,9 +14,9 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body class="devise-background">
 
-<!-- Top Navigation Bar -->
+  <!-- Top Navigation Bar -->
 
   <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
 
@@ -54,7 +54,7 @@
 
   <!-- Main Window -->
 
-  <secton class="main-container">
+  <secton class="container" id="devise-container">
 
     <%= yield %>
     <p class="notice"><%= notice %></p>

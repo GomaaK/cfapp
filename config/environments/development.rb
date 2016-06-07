@@ -41,4 +41,10 @@ Rails.application.configure do
 
   # Mailer preview
   # config.action_mailer.preview_path
+
+  # For Devise gem - so dynamic links in emails generate correct URLs
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # For Devise gem installation
+  default_url_options
 end

@@ -42,10 +42,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
 # Use sqlite3 only in development and test environments
 group :development, :test do
   gem 'sqlite3'
 end
+
 # Needed for Heroku production environment
 group :production do
   gem 'rails_12factor'
@@ -60,3 +62,6 @@ gem 'jquery-turbolinks', '~> 2.1'
 
 # Bootstrap for Rails gem
 gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
+
+# Devise - for Rails authentication
+gem 'devise'
