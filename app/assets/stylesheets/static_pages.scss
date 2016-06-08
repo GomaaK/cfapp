@@ -279,15 +279,19 @@ input, textarea {
 // Media Queries
 
 @media (max-width: 660px) {
+	#twitter-api {
+		display: none;
+	}
+	.lower-icon-row {
+		width: 75%;
+	}
 	.search-form {
 		width: 300px;
 	}
-
 	.search-field {
 		width: 180px;
 		padding: 4px 7px;
 	}
-
 	.search-button {
 		padding: 3px 7px;
 	}

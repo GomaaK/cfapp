@@ -6,5 +6,6 @@ class OrdersController < ApplicationController
   end
 
   def show
+  	@orders = Order.all
   end
 end

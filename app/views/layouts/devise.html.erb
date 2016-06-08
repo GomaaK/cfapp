@@ -54,11 +54,17 @@
 
   <!-- Main Window -->
 
-  <secton class="container" id="devise-container">
+  <secton class="container">
 
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
+    <% if notice %>
+      <p class="alert alert-warning"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
   </secton>
 

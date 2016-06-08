@@ -17,6 +17,9 @@
 //= require_tree .
 
 $(document).on('ready page:load', function () {
+    // Fade in page headers
+    $("#static-header").delay(600).fadeIn(600);
+
 	// Equalize product box title heights
     var titleHeight = 0;           
     $(".product-title").each(function(){
@@ -29,4 +32,7 @@ $(document).on('ready page:load', function () {
       if ($(this).height() > authorHeight) { authorHeight = $(this).height(); }
     });         
     $(".product-author").height(authorHeight);
+
+    // Fade out alerts
+    $(".alert").delay(2000).fadeOut(800);
 });

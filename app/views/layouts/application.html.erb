@@ -57,8 +57,14 @@
   <secton class="main-container">
 
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <% if notice %>
+      <p class="alert alert-warning"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
   </secton>
 
@@ -66,14 +72,15 @@
 
   <footer>
     <div class="container">
-      <div class="copyright">
-        <p>Terms and Conditions<br>
-        Legal Information<br>
-        Return Policy<br>
-        &copy; 2016, Oasis Books, Inc.</p>
+      <div class="footer-links">
+        <p>Terms &amp; Conditions | Legal Information</p>
+        <p>Impressum | Return Policy</p>
+        <p>&copy; 2016, Oasis Books, Inc.</p>
       </div>
 
       <div class="socia-media-links">
+        <p>Connect with us on</p>
+
         <a class="btn btn-social-icon btn-facebook">
           <span class="fa fa-facebook"></span>
         </a>

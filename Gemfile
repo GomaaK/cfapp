@@ -65,3 +65,6 @@ gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 
 # Devise - for Rails authentication
 gem 'devise'
+
+# CanCanCan - for Rails authorization
+gem 'cancancan'
