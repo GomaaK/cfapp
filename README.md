@@ -13,9 +13,9 @@ Creator: Christian McTighe
 
 Email: cwmct79@gmail.com
 
-GitHub: [Link] (https://github.com/cwmct79/cfapp.git)
+GitHub: [Link](https://github.com/cwmct79/cfapp.git)
 
-Productions site: [On Heroku] (https://oasisbooks.herokuapp.com/)
+Productions site: [On Heroku](https://oasisbooks.herokuapp.com/)
 
 ## Notes
 
@@ -26,11 +26,14 @@ Productions site: [On Heroku] (https://oasisbooks.herokuapp.com/)
 * Databases:
 
     development: sqlite3
+
     production: postgresql (Heroku)
 
-* Orders controller and Order model not fully completed
+* Special gems installed: Rubocop, Turbolinks, Twitter-Bootstrap-Rails, Devise, CanCanCan.
 
 * No test suite installed
+
+* Orders controller and Order model not fully completed (as of June 9, 2016)
 
 * To my CF mentors:
 	Please feel free to leave any comments and give me feedback. **Thanks**.
