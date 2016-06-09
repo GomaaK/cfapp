@@ -36,17 +36,16 @@
           <li><%= link_to "Home", root_path, class: "scroll-nav" %></li>
           <li><%= link_to "Products", products_path, class: "scroll-nav" %></li>
           <li><%= link_to "Search", '/search', class: "scroll-nav" %></li>
-          <li><%= link_to "Orders", orders_path, class: "scroll-nav" %></li>
           <li><%= link_to "About", '/about', class: "scroll-nav" %></li>
           <li><%= link_to "Contact", '/contact', class: "scroll-nav" %></li>
-          <li><%= link_to "Sign Up", '/sign_up', class: "scroll-nav" %></li>
-          <li>
-            <% if user_signed_in? %>
-              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-            <% else %>
-              <%= link_to('Login', new_user_session_path) %>
-            <% end %>
-          </li>
+          <% if user_signed_in? %>
+            <li><%= link_to("My Profile", '/profile', class: "scroll-nav") %></li>
+            <li><%= link_to "My Orders", orders_path, class: "scroll-nav" %></li>
+            <li><%= link_to("Logout", destroy_user_session_path, :method => :delete, class: "scroll-nav") %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", '/sign_up', class: "scroll-nav" %></li>
+            <li><%= link_to("Login", new_user_session_path, class: "scroll-nav") %></li>
+          <% end %>
         </ul>
       </div>
     </div>
@@ -72,14 +71,15 @@
 
   <footer>
     <div class="container">
-      <div class="copyright">
-        <p>Terms and Conditions<br>
-        Legal Information<br>
-        Return Policy<br>
-        &copy; 2016, Oasis Books, Inc.</p>
+      <div class="footer-links">
+        <p>Terms &amp; Conditions | Legal Information</p>
+        <p>Impressum | Return Policy</p>
+        <p>&copy; 2016, Oasis Books, Inc.</p>
       </div>
 
       <div class="socia-media-links">
+        <p>Connect with us on</p>
+
         <a class="btn btn-social-icon btn-facebook">
           <span class="fa fa-facebook"></span>
         </a>

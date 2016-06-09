@@ -26,7 +26,6 @@ Productions site: [On Heroku] (https://oasisbooks.herokuapp.com/)
 * Databases:
 
     development: sqlite3
-	
     production: postgresql (Heroku)
 
 * Orders controller and Order model not fully completed

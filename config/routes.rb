@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get '/sign_up', to: 'devise/registrations#new'
+    get '/profile', to: 'devise/registrations#edit'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
