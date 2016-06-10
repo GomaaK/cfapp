@@ -33,8 +33,16 @@
 		  $<%= @product.price %>
 		</p>
 
-		<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-edit-delete" %>
-		<%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-edit-delete" %>
+		<div class="product-comments">
+			<p><b>User Rating:</b></p>
+			<p><b>Users Have Said:</b></p>
+			<div class="user-comments"></div>
+		</div>
+
+		<div class="edit-delete-links">
+			<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-edit-delete" %>
+			<%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-edit-delete" %>
+		</div>
 
 		</div>
 

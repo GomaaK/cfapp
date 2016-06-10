@@ -68,3 +68,7 @@ gem 'devise'
 
 # CanCanCan - for Rails authorization
 gem 'cancancan'
+
+# Clean up databases
+gem 'activerecord-reset-pk-sequence'
+
