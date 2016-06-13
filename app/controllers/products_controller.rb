@@ -22,9 +22,10 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   # @previous and @next for links to previous and next products in show page
   def show
-    @product = Product.find(params[:id])   
+    @product = Product.find(params[:id])
     @previous = Product.where("id < ?", params[:id]).order(:id).first   
     @next = Product.where("id > ?", params[:id]).order(:id).first
+    @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :products
   resources :orders, only: [:index, :show]
+
+  resources :products do
+    resources :comments
+  end
 
   # You can have the root of your site routed with "root"
   root 'static_pages#index'

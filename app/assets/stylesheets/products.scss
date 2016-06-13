@@ -89,15 +89,27 @@
 	margin: 2% 0;
 }
 
-.product-comments {
-	display: block;
-	height: 150px;
+.overall-rating {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 0;
 }
 
-.user-comments {
-	height: 100px;
-	padding: 5px;
-	border: 1px solid #d3d3d3;
+#overall-star-rating {
+	margin-left: 5px;
+}
+
+.product-comments {
+	display: block;
+}
+
+.comment-row {
+	padding: 0 15px;
+}
+
+.review-form form {
+	margin-left: 0;
+	border: none;
 }
 
 .edit-delete-links {
