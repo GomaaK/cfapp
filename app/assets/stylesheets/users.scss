@@ -2,3 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Index
+
+.users-jumbotron {
+	position: relative;
+	background: url("users_image.jpg") center center;
+  background-size: cover;
+  overflow: hidden;
+  min-height: 50vh;
+}
+
+.users-container {
+	width: 90%;
+	margin: 2% auto;
+}
+
+.users-container table {
+	border: 1px solid #000;
+	margin: 0 auto;
+}
+
+.users-container th {
+	text-align: center;
+	padding: 5px;
+	background-color: #d3d3d3;
+}
+
+.users-container td {
+	padding: 5px;
+}
+
+// New
+
+.user-form {
+	max-width: 500px;
+	margin: 0 auto;
+}

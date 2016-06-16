@@ -1,104 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <%= render 'layouts/head' %>
 
-<head>
-  <title>Oasis Books</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.0.0/bootstrap-social.css">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="https://use.fontawesome.com/981382a342.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Christian McTighe">
-  <%= csrf_meta_tags %>
-</head>
+  <body class="devise-background">
 
-<body class="devise-background">
+    	<%= render 'layouts/nav' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
 
-  <!-- Top Navigation Bar -->
+  </body>
 
-  <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
-
-    <div class="container-fluid">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-middle">
-          <li><%= link_to "Home", root_path, class: "scroll-nav" %></li>
-          <li><%= link_to "Products", products_path, class: "scroll-nav" %></li>
-          <li><%= link_to "Search", '/search', class: "scroll-nav" %></li>
-          <li><%= link_to "About", '/about', class: "scroll-nav" %></li>
-          <li><%= link_to "Contact", '/contact', class: "scroll-nav" %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to "My Orders", orders_path, class: "scroll-nav" %></li>
-            <li><%= link_to("My Profile", '/profile', class: "scroll-nav") %></li>
-            <li><%= link_to("Logout", destroy_user_session_path, :method => :delete, class: "scroll-nav") %></li>
-          <% else %>
-            <li><%= link_to "Sign Up", '/sign_up', class: "scroll-nav" %></li>
-            <li><%= link_to("Login", new_user_session_path, class: "scroll-nav") %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Window -->
-
-  <secton class="container">
-
-    <%= yield %>
-    
-    <% if notice %>
-      <p class="alert alert-warning"><%= notice %></p>
-    <% end %>
-
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
-  </secton>
-
-  <!-- Footer -->
-
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <p>Terms &amp; Conditions | Legal Information</p>
-        <p>Impressum | Return Policy</p>
-        <p>&copy; 2016, Oasis Books, Inc.</p>
-      </div>
-
-      <div class="socia-media-links">
-        <p>Connect with us on</p>
-
-        <a class="btn btn-social-icon btn-facebook">
-          <span class="fa fa-facebook"></span>
-        </a>
-
-        <a class="btn btn-social-icon btn-twitter">
-          <span class="fa fa-twitter"></span>
-        </a>
-
-        <a class="btn btn-social-icon btn-pinterest">
-          <span class="fa fa-pinterest"></span>
-        </a>
-
-        <a class="btn btn-social-icon btn-tumblr">
-          <span class="fa fa-tumblr"></span>
-        </a>
-      </div>
-
-    </div>
-  </footer>
-
-</body>
 </html>

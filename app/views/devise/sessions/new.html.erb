@@ -1,6 +1,13 @@
 <div class="devise-page">
   <h2>Log In</h2>
 
+  <% if notice %>
+    <p class="alert alert-warning"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
   <div class="login-form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <p>Please log in to continue</p>

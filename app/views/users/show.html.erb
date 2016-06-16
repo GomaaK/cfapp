@@ -1,14 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="users-jumbotron">
+  <div class="container">
+    <h1 id="static-header">Show User Info</h1>
+  </div>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+<div class="container users-container">
 
-<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-navigate" %>
-<%= link_to 'Back', users_path, class: "btn btn-navigate" %>
+	<p>
+	  <strong>User ID:</strong>
+	  <%= @user.id %>
+	</p>
+
+	<p>
+	  <strong>First name:</strong>
+	  <%= @user.first_name %>
+	</p>
+
+	<p>
+	  <strong>Last name:</strong>
+	  <%= @user.last_name %>
+	</p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @user.email %>
+	</p>
+
+	<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-navigate" %>
+	<%= link_to 'Back', users_path, class: "btn btn-navigate" %>
+
+</div>

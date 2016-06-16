@@ -3,10 +3,8 @@ class Comment < ActiveRecord::Base
   belongs_to :product
 
 	validates :body, length: {
-    minimum: 2,
-    maximum: 50,
-    too_short: "Your review must have at least %{count} characters",
-    too_long: "Your review may not have more than %{count} characters"
+    minimum: 3,
+    maximum: 50
   }
 	validates :user, presence: true
 	validates :product, presence: true

@@ -1,5 +1,20 @@
-<h1>New User</h1>
+<div class="users-jumbotron">
+  <div class="container">
+    <h1 id="static-header">New User</h1>
+  </div>
+</div>
 
-<%= render 'form' %>
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
-<%= link_to 'Back', users_path, class: "btn btn-navigate" %>
+<div class="container users-container">
+
+	<%= render 'form' %>
+
+	<%= link_to 'Back', users_path, class: "btn btn-navigate" %>
+
+</div>

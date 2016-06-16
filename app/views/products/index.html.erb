@@ -4,6 +4,13 @@
 	</div>
 </div>
 
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <div class="container product-index-container">
 	<p id="products-subtitle">Here is a selection of the books that we currently have in our inventory.</p>
 	<p id="notice"><%= notice %></p>

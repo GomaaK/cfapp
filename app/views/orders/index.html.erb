@@ -4,6 +4,13 @@
 	</div>
 </div>
 
+	<% if notice %>
+    <p class="alert alert-warning"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
 <p id="orders-subtitle">Here is a list of orders that we are processing or have already processed.</p>
 
 <div class="container orders-index-container">

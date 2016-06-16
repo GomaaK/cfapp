@@ -1,6 +1,13 @@
 <%= image_tag("books_products.jpg", class: "img-responsive") %>
 <h1>Edit Product</h1>
 
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <div class="edit-product-container">
 	<%= render 'form' %>
 

@@ -4,7 +4,13 @@
 </div>
 
 <h1><%= @product.title %></h1>
-<p id="notice"><%= notice %></p>
+
+<% if notice %>
+  <p class="alert alert-warning" id="notice"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 <div class="container show-container">
 	<div class="row show-product-row">

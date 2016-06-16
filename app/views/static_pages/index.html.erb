@@ -4,6 +4,13 @@
 	</div>
 </div>
 
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <div class="container-fluid" id="static-index-container">
 
 	<div class="row">

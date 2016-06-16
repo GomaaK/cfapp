@@ -11,15 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="user-form">
+    <div class="field">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= submit_tag "Submit", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

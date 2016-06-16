@@ -4,6 +4,13 @@
 	</div>
 </div>
 
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <div class="book-search">
 	<h2>Already know what you want?</h2>
 		<div class="input-group">

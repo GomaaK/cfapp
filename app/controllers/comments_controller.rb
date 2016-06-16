@@ -5,10 +5,10 @@ class CommentsController < ApplicationController
 		@comment.user = current_user
 		respond_to do |format|
 			if @comment.save
-				format.html { redirect_to @product, notice: 'Review was created successfully.' }
+				format.html { redirect_to @product, notice: 'Thank you for your review!' }
 				format.json { render :show, status: :created, location: @product }
 			else
-				format.html { redirect_to @product, alert: 'Something went wrong. Review was not saved.' }
+				format.html { redirect_to @product, alert: 'Please make sure your review is between 3 and 50 characters.' }
 				format.json { render json: @comment.errors, status: :unprocessable_entity }
 			end
 		end
