@@ -11,12 +11,23 @@
   <div class="login-form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <p>Please log in to continue</p>
-      <div class="field">
-        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
+
+      <div class="input-group input-group-sm">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </span>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
+        </div>
       </div>
 
-      <div class="field">
-        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+      <div class="input-group input-group-sm">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-lock"></span>
+        </span>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+        </div>
       </div>
 
       <% if devise_mapping.rememberable? -%>

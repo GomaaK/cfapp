@@ -21,9 +21,11 @@
 		</div>
 	</div>
 
-	<div>
-	  <%= link_to 'Add New Product', new_product_path, class: "btn btn-navigate" %>
-	</div>
+	<% if signed_in? && current_user.admin? %>
+		<div>
+			<%= link_to 'Add New Product', new_product_path, class: "btn btn-navigate" %>
+		</div>
+	<% end %>
 
 </div>
 
