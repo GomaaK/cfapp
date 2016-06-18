@@ -6,7 +6,7 @@
 
 .users-jumbotron {
 	position: relative;
-	background: url("users_image.jpg") center center;
+	background: url("books_devise.jpg") center center;
   background-size: cover;
   overflow: hidden;
   min-height: 50vh;
@@ -14,7 +14,7 @@
 
 .users-container {
 	width: 80%;
-	margin: 2% auto;
+	margin: 5% auto;
 }
 
 .users-container table {
@@ -35,6 +35,6 @@
 // New
 
 .user-form {
-	max-width: 500px;
-	margin: 0 auto;
+	max-width: 400px;
+	margin: 2% auto;
 }

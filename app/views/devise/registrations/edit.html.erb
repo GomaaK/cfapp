@@ -27,7 +27,12 @@
               <strong>Email:</strong>
               <%= @user.email %>
             </p>
+
+            <h3>Edit your user info</h3>
+            <br>
+            <p><%= link_to 'Edit', edit_user_path(@user), class: "btn btn-md btn-primary" %></p>
           </div>
+
         </div>
 
       <div class="col-md-6">
