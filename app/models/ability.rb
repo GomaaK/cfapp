@@ -8,9 +8,11 @@ class Ability
         can :manage, :all
     else
         can :manage, User, id: user.id
-        can :read, Product
-        cannot [:create, :edit, :update, :destroy], Product
+        cannot :index, User
+        can [:index, :show, :search_results], Product
+        cannot [:new, :create, :edit, :update, :destroy], Product
         can :create, Comment
+        cannot :destroy, Comment
     end
   end
 
