@@ -1,6 +1,13 @@
 class UserMailer < ApplicationMailer
 	default from: "cwmct79@gmail.com"
 
+# Welcome message to new user
+  def welcome(user)
+    @appname = "Oasis Books"
+    mail( :to => user.email,
+          :subject => "Welcome to #{@appname}!")
+  end
+
 # Contact form submission information email to me
 	def contact_info(name, company, email, telephone, message)
 		@name = name

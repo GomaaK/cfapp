@@ -5,7 +5,7 @@
 // General
 
 .devise-page {
-	margin-top: 7%;
+	margin: 10% 0;
 }
 
 .devise-background {
@@ -19,13 +19,10 @@
 
 .devise-page h3 {
 	color: #000;
+	margin: 0 auto;
 }
 
 .devise-page h4 {
-	color: #000;
-}
-
-.devise-page p {
 	color: #000;
 }
 
@@ -37,12 +34,24 @@
 	margin: 0 auto;
 }
 
+.signup-form p {
+	color: #fff;
+}
+
 // Login Form
 
 .login-form {
 	max-width: 450px;
   padding: 15px;
 	margin: 0 auto;
+}
+
+.login-form p {
+	color: #fff;
+}
+
+#remember-me {
+	color: #fff;
 }
 
 // Password Form
@@ -53,12 +62,36 @@
 	margin: 0 auto;
 }
 
+.password-form p {
+	color: #fff;
+}
+
 // Profile Edit Form
+
+.profile-info {
+	max-width: 450px;
+  padding: 10px 15px;
+	margin: 2% auto;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.profile-info p {
+	color: #fff;
+}
 
 .profile-edit-form {
 	max-width: 450px;
-  padding: 15px;
+  padding: 0 15px;
 	margin: 0 auto;
+}
+
+.profile-edit-form h3 {
+	text-align: center;
+}
+
+.profile-edit-form p {
+	color: #fff;
 }
 
 .cancel-account {
