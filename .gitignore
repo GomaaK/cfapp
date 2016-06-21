@@ -6,6 +6,9 @@
 
 # Standard Gitignore file for Rails from GitHub below
 
+# Local computer file
+.DS_Store
+
 *.rbc
 capybara-*.html
 .rspec
