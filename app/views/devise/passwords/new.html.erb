@@ -6,9 +6,14 @@
 			<p>Password Reset</p>
 		  <%= devise_error_messages! %>
 
-		  <div class="field">
-		    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
-		  </div>
+		  <div class="input-group input-group-sm">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </span>
+			  <div class="field">
+			    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
+			  </div>
+			</div>
 
 		  <div class="actions">
 		    <%= f.submit "Reset Password", class: "btn btn-md btn-primary" %>
