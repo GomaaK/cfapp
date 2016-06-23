@@ -11,9 +11,8 @@
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
 
-<p id="orders-subtitle">Here is a list of orders that we are processing or have already processed.</p>
-
-<div class="container orders-index-container">
+<div class="orders-index-container">
+  <p>Here is a list of orders that we are processing or have already processed.</p>
 	<div class="row orders-row">
 		<%= render @orders %>
 	</div>

@@ -13,67 +13,69 @@
 
 <div class="static-contact-container">
 	<div class="row">
-		<div class="col-md-6 col-sm-4 col-xs-12">
+		<div class="col-md-6 col-xs-12">
 			<p>We can be contacted easily by email, telephone or Skype (FaceTime or Google Hangouts is also possible).</p>
 			<p>If you prefer to get in touch with us right away, feel free to use the contact form below.</p>
 			<p>Don't be afraid to let us know if you have any questions &ndash; we enjoy talking with our customers!</p>
 		</div>
 
-		<div class="col-md-6 col-sm-8 col-xs-12 contact-info">
+		<div class="col-md-6 col-xs-12" id="contact-info">
 		  <ul>
-		    <li><span class="glyphicon glyphicon-envelope"></span> email: info@oasisbooks.com</li>
-		    <li><span class="glyphicon glyphicon-earphone"></span> mobile: +49 (0)89 12345678</li>
-		    <li><span class="glyphicon glyphicon-facetime-video"></span> skype: oasisbooks</li>
+		    <li><span class="glyphicon glyphicon-envelope"></span>email: info@oasisbooks.com</li>
+		    <li><span class="glyphicon glyphicon-earphone"></span>telephone: +49 (0)89 12345678</li>
+		    <li><span class="glyphicon glyphicon-facetime-video"></span>skype: oasisbooks</li>
 		  </ul>
 		</div>
 	</div>
+
+	<div id="contact-form">
+		<!-- Contact form section -->
+		<%= flash[:notice] %>
+
+		<%= form_tag("/static_pages/thank_you") do %>
+		  <div class="row">
+	      <div class="field col-xs-6">
+	      	<div class="form-group">
+		        <%= label_tag :name, "Name*" %>
+		        <%= text_field_tag :name, nil, placeholder: "John Doe", class: "form-control", id: "form-name", required: true, minlength: 2, maxlength: 30 %>
+		      </div>
+		     </div>
+		     <div class="field col-xs-6">
+		     	<div class="form-group">
+		        <%= label_tag :company, "Company" %>
+		        <%= text_field_tag :company, nil, placeholder: "Doe Inc.", class: "form-control", id: "form-company", minlength: 2, maxlength: 30 %>
+		      </div>
+		     </div>
+		    </div>
+		   <br>
+		   <div class="row">
+		     <div class="field col-xs-6">
+		      <div class="form-group">
+		        <%= label_tag :email, "Email*" %>
+		        <%= text_field_tag :email, nil, class: "form-control", placeholder: "john@doe.com", id: "form-email", required: true, minlength: 6, maxlength: 40 %>
+		      </div>
+		     </div>
+		     <div class="field col-xs-6">
+		     	<div class="form-group">
+		        <%= label_tag :telephone, "Telephone" %>:
+		        <%= text_field_tag :telephone, nil, class: "form-control", placeholder: "123-456-7890", id: "form-telephone", min: 9, max: 15 %>
+		      </div>
+		     </div>
+		    </div>
+		   <br>
+		   <div class="row">
+		     <div class="field col-xs-12">
+		     	<div class="form-group">
+		        <%= label_tag :message, "Message*" %>
+		        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your message here.", id: "message-box", cols: 40, rows: 5, required: true, minlength: 5, maxlength: 400 %>
+		        <br>
+		        <%= submit_tag "Send", class: "btn btn-primary outline", id: "form-button" %>
+		      </div>
+		    </div>
+		  </div>
+		<% end %>
+
+	</div>
 </div>
 
-<div class="container" id="contact-form">
-	<!-- Contact form section -->
-	<%= flash[:notice] %>
-
-	<%= form_tag("/static_pages/thank_you") do %>
-	  <div class="row">
-      <div class="field col-xs-6">
-      	<div class="form-group">
-	        <%= label_tag :name, "Name*" %>
-	        <%= text_field_tag :name, nil, placeholder: "John Doe", class: "form-control", id: "form-name", required: true, minlength: 2, maxlength: 30 %>
-	      </div>
-	     </div>
-	     <div class="field col-xs-6">
-	     	<div class="form-group">
-	        <%= label_tag :company, "Company" %>
-	        <%= text_field_tag :company, nil, placeholder: "Doe Inc.", class: "form-control", id: "form-company", minlength: 2, maxlength: 30 %>
-	      </div>
-	     </div>
-	    </div>
-	   <br>
-	   <div class="row">
-	     <div class="field col-xs-6">
-	      <div class="form-group">
-	        <%= label_tag :email, "Email*" %>
-	        <%= text_field_tag :email, nil, class: "form-control", placeholder: "john@doe.com", id: "form-email", required: true, minlength: 6, maxlength: 40 %>
-	      </div>
-	     </div>
-	     <div class="field col-xs-6">
-	     	<div class="form-group">
-	        <%= label_tag :telephone, "Telephone" %>:
-	        <%= text_field_tag :telephone, nil, class: "form-control", placeholder: "123-456-7890", id: "form-telephone", min: 9, max: 15 %>
-	      </div>
-	     </div>
-	    </div>
-	   <br>
-	   <div class="row">
-	     <div class="field col-xs-12">
-	     	<div class="form-group">
-	        <%= label_tag :message, "Message*" %>
-	        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Your message here.", id: "message-box", cols: 40, rows: 5, required: true, minlength: 5, maxlength: 400 %>
-	        <br>
-	        <%= submit_tag "Send", class: "btn btn-primary outline", id: "form-button" %>
-	      </div>
-	    </div>
-	  </div>
-	<% end %>
-
-</div>
+<div class="extra-space"></div>

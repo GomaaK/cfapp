@@ -10,15 +10,13 @@
   min-height: 50vh;
 }
 
-#orders-subtitle {
-	margin-top: 2%;
-	font-style: italic;
-	margin: 2% 0 2% 10%;
+.orders-index-container {
+  width: 75%;
+	margin: 2% auto 10% auto;
 }
 
-.orders-index-container {
-	background-color: #d3d3d3;
-	margin: 2% auto 10% auto;
+.orders-row {
+  background-color: #d3d3d3;
 }
 
 .order-box {
