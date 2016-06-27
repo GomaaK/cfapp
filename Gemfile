@@ -47,6 +47,14 @@ group :development do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Guard for automated testing
+  gem 'guard'
+  # Guard-spec for rspec automated testing
+  gem 'guard-rspec', require: false
+  # Spork to speed up automated testing
+  gem 'spork-rails'
+  # Guard-Spork plug-in so they work together
+  gem 'guard-spork'
 end
 
 # Needed for Heroku production environment
