@@ -83,3 +83,6 @@ gem 'activerecord-reset-pk-sequence'
 
 # Will_paginate for comments pagination
 gem 'will_paginate', '~> 3.1.0'
+
+# Stripe payment system
+gem 'stripe'
