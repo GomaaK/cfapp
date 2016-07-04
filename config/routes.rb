@@ -25,6 +25,9 @@ Rails.application.routes.draw do
     get '/profile', to: 'devise/registrations#edit'
   end
 
+  post '/payments/create', to: 'payments#create'
+  get 'payments/payment_thank_you', to: 'payments#payment_thank_you'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

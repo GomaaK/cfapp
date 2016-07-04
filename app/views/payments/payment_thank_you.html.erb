@@ -1,0 +1,24 @@
+<div class="products-search-jumbotron">
+  <div class="container">
+  <h1 id="static-header">Thank You</h1>
+  </div>
+</div>
+
+<% if notice %>
+  <p class="alert alert-warning"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+<div class="container show-container">
+
+  <p>Thank you very much for your purchase!</p>
+
+  <%= link_to 'View Orders', orders_path, class: "btn btn-navigate" %>
+
+  <%= link_to 'Back to Products', products_path, class: "btn btn-navigate" %>
+
+</div>
+
+<div class="extra-space"></div>

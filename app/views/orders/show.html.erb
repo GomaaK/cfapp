@@ -12,23 +12,21 @@
  <% end %>
 
 <div class="container show-container">
-	<% @orders.each do |order| %>
-		<p id="notice"><%= notice %></p>
+		
 		<p>
-		  <strong>Order Number:</strong>
-		  <%= order.id %>
-		</p>
+      <strong>Order Number:</strong>
+      <%= @order.id %>
+    </p>
 
-		<p>
-		  <strong>Product ID:</strong>
-		  <%= order.product_id %>
-		</p>
+    <p>
+      <strong>Product ID:</strong>
+      <%= @order.product_id %>
+    </p>
 
-		<p>
-		  <strong>Order Total:</strong>
-		  $<%= order.total %>
-		</p>
-	<% end %>
+    <p>
+      <strong>Order Total:</strong>
+      $<%= @order.total %>
+    </p>
 
 	<div class="bottom-navigation-links">
 		<%= link_to 'Back to Orders', orders_path, class: "btn btn-navigate" %>
