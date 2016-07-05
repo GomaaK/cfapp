@@ -24,9 +24,12 @@
 		</div>
 
 		<div class="col-md-6 col-xs-12" id="main-box">
-			<h2>Welcome</h2>
+			<% if user_signed_in? %>
+				<h2>Welcome Back, <%= current_user.first_name %>!</h2>
+			<% else %>
+				<h2>Welcome</h2>
+			<% end %>
 			<hr>
-			<br>
 			<p>This is a paradise for books on the Internet!</p>
 			<p>If you're looking for a particular book, you've come to the right place.</p>
 			<p>We have an enormous selection of books, which you can browse on our online catalog.</p>

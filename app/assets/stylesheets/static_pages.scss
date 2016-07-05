@@ -91,6 +91,10 @@
 
 // Search page
 
+.search-form {
+	border: none;
+}
+
 .products-search-jumbotron {
 	position: relative;
 	background: url("books_search.jpg") center center;
@@ -243,6 +247,7 @@ input, textarea {
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
+	color: #707f8e !important;
 }
 
 .btn.outline {
@@ -255,16 +260,17 @@ input, textarea {
 	color: #707f8e;
 }
 
-.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .open > .dropdown-toggle.btn-primary {
-	color: #588998;
+#form-button:hover,
+#form-button:focus {
+	color: #588998 !important;
 	border-color: #588998;
 }
 
-.btn-primary.outline:active {
+#form-button:active {
 	background-color: #588998;
 	border-color: #588998;
 	outline: none;
-	color: #fff;
+	color: #fff !important;
 	box-shadow: none;
 }
 

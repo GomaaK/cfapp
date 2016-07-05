@@ -153,6 +153,20 @@ p {
 	background-color: #207cca;
 }
 
+/* Button navigation */
+
+.btn-primary {
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  color: #ccc !important;
+}
+
+.btn-primary:active {
+  color: #ccc !important;
+}
+
 /* Footer */
 
 footer {
