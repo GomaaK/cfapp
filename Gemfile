@@ -86,3 +86,6 @@ gem 'will_paginate', '~> 3.1.0'
 
 # Stripe payment system
 gem 'stripe'
+
+# Brakeman security tool
+gem 'brakeman', require: false
