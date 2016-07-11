@@ -66,6 +66,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    elevatezoom-rails (1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.7.0)
@@ -146,6 +147,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (3.4.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -279,6 +281,7 @@ DEPENDENCIES
   cancancan
   coffee-rails (~> 4.1.0)
   devise
+  elevatezoom-rails
   factory_girl_rails (~> 4.0)
   guard
   guard-rspec
@@ -287,6 +290,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks (~> 2.1)
   pg
+  puma
   rails (= 4.2.6)
   rails_12factor
   rspec-rails (~> 3.4)

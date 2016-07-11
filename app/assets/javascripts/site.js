@@ -16,8 +16,17 @@ $(document).on('ready page:load', function(){
   });         
   $(".product-author").height(authorHeight);
 
-  // Fade out alerts
-  $(".alert").delay(2000).fadeOut(800);
+  // elevateZoom jQuery plugin for product image
+  $('#show-product-image').elevateZoom({
+      responsive: true,
+      scrollZoom: true,
+      easing: true,
+      zoomType: "lens",
+      lensSize: 100,
+      lensFadeIn: 300,
+      lensFadeOut: 300,
+      lensShape: "round"
+  });
 
 	// Raty jQuery Star Rating Plugin
 	$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
@@ -27,5 +36,8 @@ $(document).on('ready page:load', function(){
 	    return $(this).attr('data-score');
 	  }
 	});
+
+  // Fade out alerts
+  $(".alert").delay(2000).fadeOut(800);
 
 });

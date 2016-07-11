@@ -89,3 +89,9 @@ gem 'stripe'
 
 # Brakeman security tool
 gem 'brakeman', require: false
+
+# Puma web server
+gem 'puma'
+
+# elevateZoom jQuery plugin for Rails
+gem 'elevatezoom-rails'
