@@ -9,6 +9,9 @@
 # Local computer file
 .DS_Store
 
+# Secrets
+secrets.yml
+
 *.rbc
 capybara-*.html
 .rspec
