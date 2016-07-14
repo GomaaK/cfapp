@@ -1,4 +1,5 @@
-$(document).on('ready page:load', function(){
+// $(document).on('ready page:load', function(){     // old code - to be removed
+  $(document).on("turbolinks:load", function(){
 
 	// Fade in page headers
 	$("#static-header").delay(600).fadeIn(600);

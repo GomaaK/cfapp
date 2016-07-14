@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '5.0.0' #'4.2.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -52,7 +52,7 @@ group :development do
   # Guard-spec for rspec automated testing
   gem 'guard-rspec', require: false
   # Spork to speed up automated testing
-  gem 'spork-rails'
+  # gem 'spork-rails' # not compatible with Rails 5.0.0
   # Guard-Spork plug-in so they work together
   gem 'guard-spork'
 end
