@@ -1,0 +1,14 @@
+// JS for comment create
+
+// $("#new_comment").hide();
+$('.review-form').html('Thank you for your review!');
+$('.product-comment-form').prepend('<%= j render @comment %>');
+
+// Raty jQuery Star Rating Plugin AJAX Refresh
+$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+$('.rated').raty({ path: '/assets',
+  readOnly: true,
+  score: function() {
+    return $(this).attr('data-score');
+  }
+});
