@@ -95,3 +95,6 @@ gem 'puma'
 
 # elevateZoom jQuery plugin for Rails
 gem 'elevatezoom-rails'
+
+# For managing sensitve info
+gem 'figaro'
