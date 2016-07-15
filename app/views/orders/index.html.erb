@@ -11,11 +11,47 @@
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
 
-<div class="orders-index-container">
+<div class="orders-index-container" ng-controller="ordersCtrl">
+
+  <h3>Orders for customer: {{ customerName }}</h3>
+
+  <form class="form-inline" ng-submit="addOrder()">
+    <strong>Add order:</strong>
+
+    <input type="hidden" value="{{ orders[orders.length - 1].id + 1 }}" ng-model="newOrder.id">
+    <input type="number" step="0.01" class="form-control" placeholder="Total" ng-model="newOrder.total">
+    <input type="number" class="form-control" placeholder="Product ID" ng-model="newOrder.product_id">
+
+    <input type="submit" value="+" class="btn btn-primary">
+  </form>
+
   <p>Here is a list of orders that we are processing or have already processed.</p>
-	<div class="row orders-row">
-		<%= render @orders %>
-	</div>
-</div>
+	<div class="orders-row">
+    <table class="table table-hover">
+      <thead>
+        <td>Order ID</td>
+        <td>Total</td>
+        <td>Product</td>
+        <td></td>
+      </thead>
+      <tr ng-repeat="order in orders | orderBy:'-id':reverse">
+        <td>
+          {{ order.id }}
+        </td>
+        <td>
+          <strong>{{ order.total | currency }}</strong>
+        </td>
+        <td>
+          {{ order.product_id }}<br>
+          (User ID: <small ng-show="order.user_id">{{ order.user_id }}</small>)
+        </td>
+        <td>
+          <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+        </td>
+      </tr>
+    </table>
+    
+	</div><!-- end of .orders-row -->
+</div><!-- end of .orders-index-container -->
 
 <div class="extra-space"></div>

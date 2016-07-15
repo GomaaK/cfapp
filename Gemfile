@@ -52,7 +52,7 @@ group :development do
   # Guard-spec for rspec automated testing
   gem 'guard-rspec', require: false
   # Spork to speed up automated testing
-  # gem 'spork-rails' # not compatible with Rails 5.0.0
+  #gem 'spork-rails' # not compatible with Rails 5.0.0
   # Guard-Spork plug-in so they work together
   gem 'guard-spork'
 end
@@ -98,3 +98,6 @@ gem 'elevatezoom-rails'
 
 # For managing sensitve info
 gem 'figaro'
+
+# AngularJS for Rails
+# gem 'angularjs-rails'

@@ -1,5 +1,8 @@
-// $(document).on('ready page:load', function(){     // old code - to be removed
-  $(document).on("turbolinks:load", function(){
+// General JavaScript and jQuery
+
+$(document).on("turbolinks:load", function(){
+
+  angular.bootstrap(document.body, ['onlineStore'])
 
 	// Fade in page headers
 	$("#static-header").delay(600).fadeIn(600);
