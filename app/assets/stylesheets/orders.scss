@@ -15,8 +15,13 @@
 	margin: 2% auto 10% auto;
 }
 
-.orders-row {
+.orders {
   background-color: #d3d3d3;
+}
+
+.orders .table thead {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .order-box {

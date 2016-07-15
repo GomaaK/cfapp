@@ -1,21 +1,32 @@
 // AngularJS for client-side
 
-var angularApp = angular.module('onlineStore',[]);
+var angularApp = angular.module('onlineStore',['ngResource']);
 
-angularApp.controller('ordersCtrl', ['$scope', function($scope){
-  $scope.customerName = "John Smith";
-  $scope.orders =[
-    {id: 1, total: 24, product_id: 1, user_id: 1},
-    {id: 2, total: 7, product_id: 1},
-    {id: 3, total: 42, product_id: 1, user_id: 1}
-  ];
+angularApp.factory('models', ['$resource', function($resource){
+  var orders_model = $resource("/orders/:id.json", {id: "@id"});
+  var products_model = $resource("/products/:id.json", {id: "@id"});
+  var x = {
+    orders: orders_model,
+    products: products_model
+  };
+  return x;
+}]);
+
+angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models){
+  $scope.orders = models.orders.query();
+  $scope.products = models.products.query();
 
   $scope.addOrder = function(){
     if(!$scope.newOrder.product_id || $scope.newOrder.total === ''){ return; }   // if there is an empty field
-    $scope.orders.push($scope.newOrder);
+    order = models.orders.save($scope.newOrder, function(){
+      recent_order = models.orders.get({id: order.id});
+      $scope.orders.push(recent_order);
+      $scope.newOrder = '';
+    });
   }
 
   $scope.deleteOrder = function(order){
+    models.orders.delete(order);
     $scope.orders.splice($scope.orders.indexOf(order), 1);
   }
 

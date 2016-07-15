@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "user_registrations" }
   resources :users
-  resources :orders, only: [:index, :show]
+  resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :products do
     resources :comments

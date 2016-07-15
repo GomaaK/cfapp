@@ -1,13 +1,18 @@
 class OrdersController < ApplicationController
 	#skip_before_filter  :verify_authenticity_token MAKES it vulnurable for attacks
-  protect_from_forgery with: :null_session
+  #protect_from_forgery with: :null_session
+  protect_from_forgery
+  skip_before_action :verify_authenticity_token, if: :json_request?
+  respond_to :json, :html
 	
   def index
-    @orders = Order.all
+    @orders = Order.all.to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
+    respond_with @orders
   end
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
+    respond_with @order
   end
 
   def new
@@ -15,6 +20,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.create(order_params)
+    respond_with @order
   end
 
   # def update
@@ -23,6 +29,12 @@ class OrdersController < ApplicationController
 
   def destroy
     respond_with Order.destroy(params[:id])
+  end
+
+  protected
+
+  def json_request?
+    request.format.json?
   end
 
   private

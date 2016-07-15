@@ -11,22 +11,7 @@
     <p class="alert alert-danger"><%= alert %></p>
  <% end %>
 
-<div class="container show-container">
-		
-		<p>
-      <strong>Order Number:</strong>
-      <%= @order.id %>
-    </p>
-
-    <p>
-      <strong>Product ID:</strong>
-      <%= @order.product_id %>
-    </p>
-
-    <p>
-      <strong>Order Total:</strong>
-      $<%= @order.total %>
-    </p>
+<div class="container show-container" ng-controller="ordersCtrl">
 
 	<div class="bottom-navigation-links">
 		<%= link_to 'Back to Orders', orders_path, class: "btn btn-navigate" %>
