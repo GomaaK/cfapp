@@ -1,12 +1,11 @@
 class OrdersController < ApplicationController
-  #protect_from_forgery with: :null_session
+  # protect_from_forgery with: :null_session
   protect_from_forgery
-  load_and_authorize_resource
   skip_before_action :verify_authenticity_token, if: :json_request?
   respond_to :json, :html
+  load_and_authorize_resource
 	
   def index
-    @orders = Order.all
     @user = current_user
     if user_signed_in? && @user.admin?
       @orders = Order.all.to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
@@ -20,7 +19,9 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
+    # @order = Order.find(params[:id])
+    @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
+    respond_with @order
   end
 
   def new
@@ -28,12 +29,11 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.create(order_params)
+    @order.product = Product.find(params[:product_id])
+    @order.user = User.find(params[:user_id])
+    # @order = Order.create(order_params).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
     respond_with @order
   end
-
-  # def update
-  #   respond_with Order.update(params[:id], params[:order])
-  # end
 
   def destroy
     respond_with Order.destroy(params[:id])
