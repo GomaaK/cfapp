@@ -13,6 +13,7 @@ class Ability
         cannot [:new, :create, :edit, :update, :destroy], Product
         can :create, Comment
         cannot :destroy, Comment
+        can :manage, Order, user_id: user.id
     end
   end
 

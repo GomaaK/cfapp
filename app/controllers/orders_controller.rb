@@ -1,18 +1,26 @@
 class OrdersController < ApplicationController
-	#skip_before_filter  :verify_authenticity_token MAKES it vulnurable for attacks
   #protect_from_forgery with: :null_session
   protect_from_forgery
+  load_and_authorize_resource
   skip_before_action :verify_authenticity_token, if: :json_request?
   respond_to :json, :html
 	
   def index
-    @orders = Order.all.to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
-    respond_with @orders
+    @orders = Order.all
+    @user = current_user
+    if user_signed_in? && @user.admin?
+      @orders = Order.all.to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
+      respond_with @orders
+    elsif user_signed_in?
+      @orders = @user.orders.to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
+      respond_with @orders
+    else
+      redirect_to main_app.root_url, alert: "You are not logged in"
+    end
   end
 
   def show
-    @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
-    respond_with @order
+    @order = Order.find(params[:id])
   end
 
   def new

@@ -27,7 +27,12 @@
 
   <% end %>
 
-  <p>Here is a list of orders that we are processing or have already processed.</p>
+  <% if signed_in? && current_user.admin? %>
+    <p>Here is a list of all orders that have been placed by customers:</p>
+  <% else %>
+    <p>Here is a list of all of your orders:</p>
+  <% end %>
+
 	<div class="orders">
     <table class="table table-hover">
       <thead>
@@ -38,7 +43,7 @@
       </thead>
       <tr ng-repeat="order in orders | orderBy:'-id':reverse">
         <td>
-          {{ order.id }}
+          <%= link_to '{{ order.id }}', 'orders' %><!-- fix so that it links to Show order -->
         </td>
         <td>
           {{ order.total | currency }}

@@ -66,13 +66,12 @@ p {
 /* Nav Bar */
 
 .navbar {
-	/*background-color: #588998;*/
 	background-color: #000;
 	opacity: 0.5;
 	text-transform: uppercase;
 	font-size: 1.25em;
 	letter-spacing: 0.1em;
-	text-align: center;
+	text-align: left;
 	border: none;
 	height: auto !important;
 }
@@ -82,7 +81,7 @@ p {
 }
 
 .navbar-inner {
-  text-align:center;
+  text-align: center;
 }
 
 .navbar a {

@@ -2,8 +2,6 @@
 
 $(document).on("turbolinks:load", function(){
 
-  angular.bootstrap(document.body, ['onlineStore'])
-
 	// Fade in page headers
 	$("#static-header").delay(600).fadeIn(600);
 
