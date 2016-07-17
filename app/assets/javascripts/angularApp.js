@@ -24,12 +24,12 @@ angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models
   $scope.products = models.products.query();
   $scope.users = models.users.query();
 
+  // add new order via form
   $scope.addOrder = function(){
 
     // if product or user field is empty, alert message
-    if(!$scope.newOrder.product_id || !$scope.newOrder.user_id) { alert("Please choose a product and user!"); return; }
+    if(!$scope.newOrder.product_id || !$scope.newOrder.user_id) { alert("Please be sure to choose a product and user!"); return; }
 
-    // $scope.newOrder.total = $scope.newOrder.product.price;  // doesn't work
     order = models.orders.save($scope.newOrder, function(){
       recent_order = models.orders.get({id: order.id});
       $scope.orders.push(recent_order);
@@ -37,6 +37,13 @@ angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models
     });
   };
 
+  // change shipped status via checkbox
+  $scope.change = function() {
+    // $scope.order.shipped.toggleValue();  //doesn't work
+    // console.log("Toggled!");  //test to make sure change function works
+  };
+
+  // delete order via form glyphichon trashcan
   $scope.deleteOrder = function(order){
     models.orders.delete(order);
     $scope.orders.splice($scope.orders.indexOf(order), 1);

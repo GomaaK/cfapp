@@ -73,7 +73,7 @@ p {
 	letter-spacing: 0.1em;
 	text-align: left;
 	border: none;
-	height: auto !important;
+	/*height: auto !important;*/
 }
 
 .navbar li {
@@ -221,6 +221,10 @@ footer > .container {
 /* Media Queries */
 
 @media (max-width: 600px) {
+  a.scroll-nav {
+    padding: 0 !important;
+    height: 50px !important;
+  }
   footer > .container {
   width: 100%;
   min-width: 200px;
@@ -228,8 +232,8 @@ footer > .container {
   padding: 10px 5px;
   font-size: 0.75em;
   }
-  .btn-social-icon {
-  margin-left: 0;
+  .socia-media-links {
+    display: none;
   }
 }
 

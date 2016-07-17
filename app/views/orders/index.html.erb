@@ -19,14 +19,18 @@
     <form class="form-inline" ng-submit="addOrder()">
       <strong>Add order:</strong>
       <select ng-model="newOrder.product_id" class="form-control">
-        <option value="" disabled selected>Select a product</option>
+        <option value="" disabled selected>Select product</option>
         <option ng-repeat="product in products" value="{{ product.id }}">{{ product.title }} (${{ product.price }})</option>
       </select>
-      <strong>Select customer:</strong>
+      <strong>and</strong>
       <select ng-model="newOrder.user_id" class="form-control">
         <option value="" disabled selected>Select customer</option>
         <option ng-repeat="user in users" value="{{ user.id }}">{{ user.first_name }} {{ user.last_name }} (User ID: {{ user.id }})</option>
       </select>
+      <br>
+      <br>
+      <strong>Product price and shipping:</strong>
+      <input type="text" ng-model="newOrder.total" class="form-control" required="true" placeholder="Total">
       <br>
       <br>
       <input type="submit" value="New order" class="btn btn-primary">
@@ -45,15 +49,19 @@
       <thead>
         <td>Order ID</td>
         <td>Total</td>
+        <td>Shipped</td>
         <td>Product</td>
         <td>User Email</td>
       </thead>
       <tr ng-repeat="order in orders | orderBy:'-id':reverse">
         <td>
-          <%= link_to '{{ order.id }}', '/orders/' %><!-- fix so that it links to Show order -->
+          {{ order.id }}
         </td>
         <td>
           {{ order.total | currency }}
+        </td>
+        <td>
+          <input type="checkbox" value="order.shipped" ng-change="change()" ng-model="newOrder.shipped">
         </td>
         <td>
           {{ order.product.title }}

@@ -24,6 +24,11 @@ class OrdersController < ApplicationController
     respond_with @order
   end
 
+  def order_details
+    # @order = Order.find(params[:id])
+    # @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
+  end
+
   def new
   end
 
@@ -33,6 +38,9 @@ class OrdersController < ApplicationController
     @order.user = User.find(params[:user_id])
     # @order = Order.create(order_params).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
     respond_with @order
+  end
+
+  def update
   end
 
   def destroy
@@ -48,6 +56,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:product_id, :user_id, :total)
+    params.require(:order).permit(:product_id, :user_id, :total, :shipped)
   end
 end
