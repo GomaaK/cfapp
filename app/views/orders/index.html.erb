@@ -61,7 +61,7 @@
           {{ order.total | currency }}
         </td>
         <td>
-          <input type="checkbox" value="order.shipped" ng-change="change()" ng-model="newOrder.shipped">
+          <input type="checkbox" value="order.shipped" ng-click="changeShipped(order)">
         </td>
         <td>
           {{ order.product.title }}

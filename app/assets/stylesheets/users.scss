@@ -13,23 +13,17 @@
 }
 
 .users-container {
-	width: 80%;
-	margin: 5% auto;
+  width: 75%;
+	margin: 2% auto 10% auto;
 }
 
-.users-container table {
-	border: 1px solid #000;
-	margin: 0 auto;
+.users {
+  background-color: #d3d3d3;
 }
 
-.users-container th {
-	text-align: center;
-	padding: 5px;
-	background-color: #d3d3d3;
-}
-
-.users-container td {
-	padding: 5px;
+.users .table thead {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 // New

@@ -38,9 +38,9 @@ angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models
   };
 
   // change shipped status via checkbox
-  $scope.change = function() {
-    // $scope.order.shipped.toggleValue();  //doesn't work
-    // console.log("Toggled!");  //test to make sure change function works
+  $scope.changeShipped = function(order) {
+    order.shipped = !order.shipped;
+    console.log(order.shipped);  //test to make sure change function works
   };
 
   // delete order via form glyphichon trashcan

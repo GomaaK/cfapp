@@ -5,6 +5,13 @@ $(document).on("turbolinks:load", function(){
 	// Fade in page headers
 	$("#static-header").delay(600).fadeIn(600);
 
+  // Equalize index page icon box heights
+  var iconboxHeight = 0;           
+  $(".icon-box").each(function(){
+    if ($(this).height() > iconboxHeight) { iconboxHeight = $(this).height(); }
+  });         
+  $(".icon-box").height(iconboxHeight);
+
 	// Equalize product box title heights
   var titleHeight = 0;           
   $(".product-title").each(function(){
