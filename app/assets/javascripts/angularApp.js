@@ -26,7 +26,6 @@ angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models
 
   // add new order via form
   $scope.addOrder = function(){
-
     // if product or user field is empty, alert message
     if(!$scope.newOrder.product_id || !$scope.newOrder.user_id) { alert("Please be sure to choose a product and user!"); return; }
 
@@ -40,6 +39,7 @@ angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models
   // change shipped status via checkbox
   $scope.changeShipped = function(order) {
     order.shipped = !order.shipped;
+    models.orders.save(order); // returns POST...404 (Not Found)
     console.log(order.shipped);  //test to make sure change function works
   };
 

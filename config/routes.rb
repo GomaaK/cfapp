@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "user_registrations" }
   resources :users
-  resources :orders, only: [:index, :show, :create, :destroy, :order_details]
+  resources :orders, only: [:index, :show, :create, :update, :destroy]
 
   resources :products do
     resources :comments
@@ -27,8 +27,6 @@ Rails.application.routes.draw do
 
   post '/payments/create', to: 'payments#create'
   get 'payments/payment_thank_you', to: 'payments#payment_thank_you'
-
-  get '/details', to: 'orders#order_details'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

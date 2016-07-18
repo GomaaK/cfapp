@@ -19,18 +19,12 @@ class OrdersController < ApplicationController
   end
 
   def show
-    # @order = Order.find(params[:id])
     @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
     respond_with @order
   end
 
-  def order_details
-    # @order = Order.find(params[:id])
-    # @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
-  end
-
-  def new
-  end
+  # def new
+  # end
 
   def create
     @order = Order.create(order_params)
@@ -41,6 +35,13 @@ class OrdersController < ApplicationController
   end
 
   def update
+    # I've tried all of these...
+    # @order = Order.find(params[:id]).to_json(:include => [{:order => {:only => :shipped}}])
+    # @order = Order.update(params[:id]).to_json(:only => :shipped)
+    # respond_with Order.update(params[:id])
+    # respond_with Order.update(order_params).to_json
+    # @order = Order.find(params[:id])
+    # respond_with @order
   end
 
   def destroy
