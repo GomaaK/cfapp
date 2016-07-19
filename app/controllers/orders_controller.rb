@@ -28,8 +28,8 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.create(order_params)
-    @order.product = Product.find(params[:product_id])
-    @order.user = User.find(params[:user_id])
+    @order.product = Product.find(params[:product_id])  # necessary?
+    @order.user = User.find(params[:user_id])    # necessary?
     # @order = Order.create(order_params).to_json(:include => [{:product => {:only => :title}}, {:user => {:only => :email}}])
     respond_with @order
   end
@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
     # respond_with Order.update(params[:id])
     # respond_with Order.update(order_params).to_json
     # @order = Order.find(params[:id])
-    # respond_with @order
+    respond_with @order
   end
 
   def destroy

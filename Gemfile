@@ -101,3 +101,6 @@ gem 'figaro'
 
 # AngularJS for Rails
 # gem 'angularjs-rails'
+
+# For Memcachier plugin on Heroku
+gem 'dalli'

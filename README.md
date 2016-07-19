@@ -19,9 +19,9 @@ Productions site: [On Heroku](https://oasisbooks.herokuapp.com/)
 
 ## Notes
 
-* Ruby version 2.3.0
+* Ruby version 2.3.1
 
-* Rails version 4.2.6
+* Rails version 5.0.0 (project started with 4.2.6)
 
 * Databases:
 
@@ -32,8 +32,6 @@ Productions site: [On Heroku](https://oasisbooks.herokuapp.com/)
 * Special gems installed: Rubocop, Turbolinks, Twitter-Bootstrap-Rails, Devise, CanCanCan.
 
 * No test suite installed
-
-* Orders controller and Order model not fully completed (as of June 9, 2016)
 
 * To my CF mentors:
 	Please feel free to leave any comments and give me feedback. **Thanks**.

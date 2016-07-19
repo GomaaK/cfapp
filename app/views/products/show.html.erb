@@ -12,6 +12,8 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
+<% cache @product do %><!-- start of product caching -->
+
 <div class="container show-container">
 	<div class="row show-product-row">
 		<div class="col-md-4">
@@ -63,6 +65,8 @@
 		</div>
 
 	</div>
+
+<% end %><!-- end of product caching -->
 
 	<%= link_to 'Back to Products', products_path, class: "btn btn-navigate" %>
 	

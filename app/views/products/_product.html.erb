@@ -1,4 +1,7 @@
 <div class="col-md-4 col-sm-6 col-xs-12 product-box">
+
+    <% cache product do %><!-- start of product caching -->
+
 	<div class="book">
 		<div class="product-title">
     	<h2><%= product.title %></h2>
@@ -11,4 +14,7 @@
     	<p>$<%= product.price %></p>
     </div>
   </div>
+
+  <% end %><!-- end of product caching -->
+
 </div>

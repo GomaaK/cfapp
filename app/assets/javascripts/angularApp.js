@@ -19,7 +19,7 @@ angularApp.factory('models', ['$resource', function($resource){
   return x;
 }]);
 
-angularApp.controller('ordersCtrl', ['$scope', 'models', function($scope, models){
+angularApp.controller('OrdersCtrl', ['$scope', 'models', function($scope, models){
   $scope.orders = models.orders.query();
   $scope.products = models.products.query();
   $scope.users = models.users.query();
