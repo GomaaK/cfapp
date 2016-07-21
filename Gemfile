@@ -104,3 +104,9 @@ gem 'figaro'
 
 # For Memcachier plugin on Heroku
 gem 'dalli'
+
+# Redis caching
+gem 'redis-rails'
+
+# New Relic system performance monitoring tool
+gem 'newrelic_rpm'
