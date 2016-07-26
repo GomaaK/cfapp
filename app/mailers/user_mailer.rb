@@ -27,4 +27,12 @@ class UserMailer < ApplicationMailer
     mail(:to => email,
         :subject => "Thank You For Your Message")
   end
+
+  # Order and payment confirmation email to customer
+  def order_placed(name, email)
+    @name = name
+    @email = email
+    mail( :to => email,
+          :subject => "Your Order from Oasis Books")
+  end
 end

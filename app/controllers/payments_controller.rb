@@ -13,7 +13,13 @@ class PaymentsController < ApplicationController
       )
 
       if charge.paid
+        # Create new order with product ID, User ID, product price
         Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
+
+        # Send e-mail confirmation to customer
+        @name = current_user.first_name
+        @email = current_user.email
+        UserMailer.order_placed(@name, @email).deliver_now
       end
 
       flash[:success] = "Payment has been processed successfully"
